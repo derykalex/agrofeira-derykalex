@@ -1,39 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroFeira</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgroFeira - Início</title>
 </head>
 <body>
-    <header>
-        <h1>AgroFeira</h1>
-        <nav>
-            <ul>
-                <li><a href="#produtores">Quem Vende</a></li>
-                <li><a href="#produtos">O Que Vende</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a href="#principal" class="pular">Pular para o conteúdo</a>
+  
+  <header class="cabecalho-site">
+    <h1>AgroFeira</h1>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Início</a></li>
+        <li><a href="safra.html">Safra</a></li>
+        <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main id="principal">
+    <p>Bem-vindo à feira! Veja a <a href="#apresentacao">nossa apresentação</a> ou vá direto para os <a href="#produtos">nossos produtos</a>.</p>
 
-    <main>
-        <section>
-            <h2 id="produtores">Quem Vende</h2>
-            <p>A AgroFeira reúne pequenos produtores rurais da região de Paragominas, trazendo alimentos frescos e direto do campo para você.</p>
-        </section>
+    <section>
+      <h2 id="apresentacao">Apresentação</h2>
+      <p>A AgroFeira de Paragominas é o melhor lugar para encontrar alimentos frescos. Tudo <em>direto de quem planta</em> para a sua mesa.</p>
+      
+      <figure class="figura-destaque">
+        <img src="feira-330.jpg" srcset="feira-330.jpg 330w, feira-1280.jpg 1280w" sizes="(max-width: 600px) 330px, 1280px" width="330" height="247" alt="Barracas de frutas e verduras espalhadas pelo galpão da feira com clientes fazendo compras">
+        <figcaption>Foto: Rayelle da Silva Freitas, CC BY-SA 4.0, via Wikimedia Commons.</figcaption>
+      </figure>
+      
+      <search class="busca">
+        <form action="">
+          <label for="q">Procurar produto</label>
+          <input type="search" id="q" name="q">
+          <button type="submit">
+            <img src="lupa.png" alt="Buscar" width="40" height="40">
+          </button>
+        </form>
+      </search>
+    </section>
 
-        <section>
-            <h2 id="produtos">O Que Vende</h2>
-            <ul>
-                <li>Mandioca - quilo</li>
-                <li>Mel silvestre - litro</li>
-                <li>Cheiro-verde - maço</li>
-            </ul>
-        </section>
-    </main>
+    <section>
+      <h2 id="produtos">Nossos Produtos</h2>
+      <ul class="lista-produtos">
+        <li class="cartao-produto">Mandioca, na saca de 60 kg</li>
+        <li class="cartao-produto">Banana-prata, no cacho</li>
+        <li class="cartao-produto">Açaí, na rasa</li>
+        <li class="cartao-produto">Pimenta-do-reino, no quilo</li>
+        <li class="cartao-produto">Cupuaçu, no quilo</li>
+        <li class="cartao-produto">Alface, no maço</li>
+      </ul>
+      
+      <div class="aviso">
+        <p>Atenção: <strong>os preços mudam toda semana.</strong></p>
+      </div>
+    </section>
 
-    <footer>
-        <p>AgroFeira - Paragominas, PA</p>
-    </footer>
+    <aside>
+      <h2>Funcionamento e Local</h2>
+      <p>A feira acontece todos os Sábados, das 06h às 12h, na Praça Matriz, no Centro.</p>
+    </aside>
+  </main>
+  
+  <footer class="rodape-site">
+    <p>AgroFeira - Paragominas, PA. Projeto de Laboratório de Produção de Software.</p>
+  </footer>
 </body>
 </html>
