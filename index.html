@@ -1,13 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AgroFeira - Início</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <a href="#principal" class="pular">Pular para o conteúdo</a>
-  
+
+  <a class="pular" href="#conteudo-principal">Pular para o conteúdo</a>
+
   <header class="cabecalho-site">
     <h1>AgroFeira</h1>
     <nav aria-label="Principal">
@@ -19,32 +28,35 @@
       </ul>
     </nav>
   </header>
-  
-  <main id="principal">
-    <p>Bem-vindo à feira! Veja a <a href="#apresentacao">nossa apresentação</a> ou vá direto para os <a href="#produtos">nossos produtos</a>.</p>
 
-    <section>
-      <h2 id="apresentacao">Apresentação</h2>
-      <p>A AgroFeira de Paragominas é o melhor lugar para encontrar alimentos frescos. Tudo <em>direto de quem planta</em> para a sua mesa.</p>
+  <main id="conteudo-principal">
+    <p><a href="#secao-apresentacao">Ir para a apresentação</a> | <a href="#secao-produtos">Ir para os produtos</a></p>
+
+    <section id="secao-apresentacao">
+      <h2>Apresentação da Feira</h2>
+      <p>A AgroFeira reúne produtores da agricultura familiar com o compromisso de trazer alimentos frescos direto para a sua mesa, valorizando <em>quem produz com dedicação</em> na região.</p>
       
       <figure class="figura-destaque">
-        <img src="feira-330.jpg" srcset="feira-330.jpg 330w, feira-1280.jpg 1280w" sizes="(max-width: 600px) 330px, 1280px" width="330" height="247" alt="Barracas de frutas e verduras espalhadas pelo galpão da feira com clientes fazendo compras">
-        <figcaption>Foto: Rayelle da Silva Freitas, CC BY-SA 4.0, via Wikimedia Commons.</figcaption>
+        <picture>
+          <source media="(max-width: 600px)" srcset="feira-330.jpg">
+          <img src="feira-1280.jpg" width="1280" height="960" alt="Barracas de frutas e legumes numa feira livre">
+        </picture>
+        <figcaption>Barraca de produtores locais. Foto: Rayelle da Silva Freitas, CC BY-SA 4.0, via Wikimedia Commons.</figcaption>
       </figure>
-      
-      <search class="busca">
-        <form>
-          <label for="q">Procurar produto</label>
-          <input type="search" id="q" name="q">
-          <button type="submit">
-            <img src="lupa.png" alt="Buscar" width="40" height="40">
-          </button>
-        </form>
-      </search>
     </section>
 
-    <section>
-      <h2 id="produtos">Nossos Produtos</h2>
+    <search>
+      <form class="busca">
+        <label for="campo-busca">Procurar produto</label>
+        <input type="search" id="campo-busca" name="q">
+        <button type="submit">
+          <img src="lupa.png" width="40" height="40" alt="Buscar">
+        </button>
+      </form>
+    </search>
+
+    <section id="secao-produtos">
+      <h2>Produtos da Semana</h2>
       <ul class="lista-produtos">
         <li class="cartao-produto">Mandioca, na saca de 60 kg</li>
         <li class="cartao-produto">Banana-prata, no cacho</li>
@@ -53,20 +65,21 @@
         <li class="cartao-produto">Cupuaçu, no quilo</li>
         <li class="cartao-produto">Alface, no maço</li>
       </ul>
-      
-      <div class="aviso">
-        <p>Atenção: <strong>os preços mudam toda semana.</strong></p>
-      </div>
     </section>
 
-    <aside>
-      <h2>Funcionamento e Local</h2>
-      <p>A feira acontece todos os Sábados, das 06h às 12h, na Praça Matriz, no Centro.</p>
-    </aside>
+    <div class="aviso">
+      <strong>Atenção:</strong> Os preços mudam toda semana conforme a safra.
+    </div>
+
+    <section>
+      <h2>Local e Horário</h2>
+      <p>A feira acontece toda sexta-feira, das 6h às 11h, na praça central de Paragominas.</p>
+    </section>
   </main>
-  
+
   <footer class="rodape-site">
-    <p>AgroFeira - Paragominas, PA. Projeto de Laboratório de Produção de Software.</p>
+    <p>&copy; 2026 AgroFeira - Paragominas, Pará</p>
   </footer>
+
 </body>
 </html>

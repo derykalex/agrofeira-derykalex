@@ -1,0 +1,28 @@
+:root {
+  /* Cores */
+  --cor-fundo: #f4f6f4;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1f2a1f;
+  --cor-texto-suave: #4a5a48;
+  --cor-marca: #2b5e3a;
+  --cor-sobre-marca: #ffffff;
+  --cor-borda: #d1dcd3;
+
+  /* Letras */
+  --fonte-texto: system-ui, sans-serif;
+  --fonte-titulo: "Lora", serif;
+
+  /* Tamanhos (Escala modular com multiplicador 1.25) */
+  --tamanho-texto: 1rem;
+  --tamanho-h3: 1.25rem;
+  --tamanho-h2: 1.563rem;
+  --tamanho-h1: 1.953rem;
+
+  /* Espaços, raio e sombra */
+  --espaco-1: 0.5rem;
+  --espaco-2: 1rem;
+  --espaco-3: 1.5rem;
+  --espaco-4: 2rem;
+  --raio: 12px;
+  --sombra: 0 2px 6px rgb(0 0 0 / 15%);
+}

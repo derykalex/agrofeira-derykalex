@@ -1,13 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AgroFeira - Sobre</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <a href="#principal" class="pular">Pular para o conteúdo</a>
-  
+
+  <a class="pular" href="#conteudo-principal">Pular para o conteúdo</a>
+
   <header class="cabecalho-site">
     <h1>AgroFeira</h1>
     <nav aria-label="Principal">
@@ -19,60 +28,67 @@
       </ul>
     </nav>
   </header>
-  
-  <main id="principal">
-    <h2>Conheça a nossa Feira</h2>
 
-    <article>
-      <h3>Depoimento de quem vive do campo</h3>
+  <main id="conteudo-principal">
+    <h2>Sobre a AgroFeira</h2>
+    
+    <article class="depoimento">
+      <h3>Depoimento de Produtor</h3>
       <figure>
-        <img src="cupuacu.jpg" alt="Fruto de cupuaçu partido ao meio pelas mãos de uma pessoa, revelando sua polpa e sementes brancas no interior." width="330" height="247" loading="lazy">
+        <img src="cupuacu.jpg" width="330" height="247" loading="lazy" alt="Fruto de cupuaçu aberto mostrando a polpa branca">
         <figcaption>Foto: BjoernS, CC BY-SA 2.0 DE, via Wikimedia Commons.</figcaption>
       </figure>
-      <blockquote>"A venda direta na AgroFeira encurtou a distância, ajudando muito a nossa comunidade rural a prosperar sem depender de intermediários."</blockquote>
+      <blockquote>
+        <p>"Vender direto na feira mudou nossa renda e aproximou a gente de quem consome o que plantamos."</p>
+      </blockquote>
     </article>
 
-    <h3>Como vender na feira</h3>
-    <ol>
-      <li>Preencha o formulário de cadastro de produtor na nossa página.</li>
-      <li>Aguarde a vistoria técnica da organização na sua propriedade.</li>
-      <li>Receba a sua aprovação e o número oficial da sua barraca.</li>
-    </ol>
+    <section>
+      <h3>Como vender na feira</h3>
+      <ol>
+        <li>Apresentar a documentação e o CAF na associação.</li>
+        <li>Combinar os produtos disponíveis para a semana.</li>
+        <li>Trazer a produção nas sextas-feiras pela manhã.</li>
+      </ol>
+    </section>
 
-    <h3>Glossário Regional</h3>
-    <dl>
-      <dt>Saca</dt>
-      <dd>Saco utilizado para transporte e venda de farinha, raízes e grãos, pesando 60 kg.</dd>
+    <section>
+      <h3>Glossário da Feira</h3>
+      <dl>
+        <dt>Saca</dt>
+        <dd>Unidade de medida padrão correspondente a 60 kg de produtos como mandioca.</dd>
+        <dt>Cacho</dt>
+        <dd>Forma de comercialização in natura para bananas.</dd>
+        <dt>Rasa</dt>
+        <dd>Medida tradicional utilizada para a venda de açaí.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3>Perguntas Frequentes</h3>
       
-      <dt>Cacho</dt>
-      <dd>Conjunto de frutos presos ao mesmo talo longo, comum na comercialização de bananas.</dd>
-      
-      <dt>Rasa</dt>
-      <dd>Cesto tradicional da região, utilizado como medida padrão para a venda de frutos de açaí.</dd>
-    </dl>
+      <details name="faq" class="pergunta">
+        <summary>Como funciona a entrega dos produtos?</summary>
+        <p>O produtor pode trazer diretamente à feira central ou solicitar a retirada na propriedade.</p>
+      </details>
 
-    <h3>Perguntas Frequentes</h3>
-    
-    <details class="pergunta" name="faq">
-      <summary>A feira acontece mesmo se chover?</summary>
-      <p>Sim, todo o galpão da praça é totalmente coberto e protege tanto os feirantes como os clientes.</p>
-    </details>
-    
-    <details class="pergunta" name="faq">
-      <summary>Quais são as formas de pagamento aceites?</summary>
-      <p>A maioria das barracas aceita dinheiro em espécie, transferências via Pix e cartões de débito.</p>
-    </details>
-    
-    <details class="pergunta" name="faq">
-      <summary>Como sei que os produtos orgânicos são reais?</summary>
-      <p>Os produtores de base agroecológica mantêm os seus certificados visíveis nas respetivas barracas.</p>
-    </details>
+      <details name="faq" class="pergunta">
+        <summary>Qualquer produtor pode participar?</summary>
+        <p>Sim, desde que faça parte da agricultura familiar da região e possua o CAF ativo.</p>
+      </details>
 
-    <img src="enfeite.png" alt="" width="330" height="93">
+      <details name="faq" class="pergunta">
+        <summary>Quais formas de pagamento são aceitas?</summary>
+        <p>Dinheiro em espécie, PIX e transferências diretas aos produtores locais.</p>
+      </details>
+    </section>
+
+    <img src="enfeite.png" width="330" height="93" alt="">
   </main>
-  
+
   <footer class="rodape-site">
-    <p>AgroFeira - Paragominas, PA. Projeto de Laboratório de Produção de Software.</p>
+    <p>&copy; 2026 AgroFeira - Paragominas, Pará</p>
   </footer>
+
 </body>
 </html>

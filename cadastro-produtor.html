@@ -1,13 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AgroFeira - Cadastro</title>
+  <title>AgroFeira - Cadastro de Produtor</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <a href="#principal" class="pular">Pular para o conteúdo</a>
-  
+
+  <a class="pular" href="#conteudo-principal">Pular para o conteúdo</a>
+
   <header class="cabecalho-site">
     <h1>AgroFeira</h1>
     <nav aria-label="Principal">
@@ -19,36 +28,36 @@
       </ul>
     </nav>
   </header>
-  
-  <main id="principal">
-    <h2>Cadastro de Produtor</h2>
-    
+
+  <main id="conteudo-principal">
+    <h2>Faça parte da nossa feira</h2>
+
     <form class="formulario-cadastro">
       <fieldset>
         <legend>Quem é você</legend>
-        
+
         <label for="nome">Nome completo</label>
-        <input type="text" id="nome" name="nome" autocomplete="name" required>
+        <input type="text" id="nome" name="nome" required autocomplete="name">
 
         <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" autocomplete="email" required>
+        <input type="email" id="email" name="email" required autocomplete="email">
 
-        <label for="tel">Telefone</label>
-        <input type="tel" id="tel" name="tel" autocomplete="tel">
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" autocomplete="tel">
 
         <label for="caf">Número do CAF</label>
         <input type="text" id="caf" name="caf">
 
         <label for="cep">CEP da propriedade</label>
         <input type="text" id="cep" name="cep" inputmode="numeric" pattern="[0-9]{5}-?[0-9]{3}" aria-describedby="dica-cep">
-        <span id="dica-cep">Formato: 00000-000</span>
+        <p id="dica-cep">Formato: 00000-000</p>
       </fieldset>
 
       <fieldset>
         <legend>O que você vende</legend>
-        
-        <label for="produto">Produto principal</label>
-        <select id="produto" name="produto" required>
+
+        <label for="produto-principal">Produto principal</label>
+        <select id="produto-principal" name="produto-principal" required>
           <option value="">Escolha um produto</option>
           <option value="mandioca">Mandioca</option>
           <option value="banana">Banana-prata</option>
@@ -58,36 +67,39 @@
           <option value="alface">Alface</option>
         </select>
 
-        <label for="qtd">Quantidade por semana</label>
-        <input type="number" id="qtd" name="qtd" min="1" max="500" step="1" required>
+        <label for="quantidade">Quantidade por semana</label>
+        <input type="number" id="quantidade" name="quantidade" required min="1" max="500" step="1">
 
-        <label for="data">Começa a entregar em</label>
-        <input type="date" id="data" name="data">
+        <label for="data-entrega">Começa a entregar em</label>
+        <input type="date" id="data-entrega" name="data-entrega">
 
         <fieldset>
           <legend>Como entrega</legend>
-          <input type="radio" id="leva" name="entrega" value="leva">
-          <label for="leva">Leva à feira</label>
-          
-          <input type="radio" id="retira" name="entrega" value="retira">
-          <label for="retira">A feira retira na propriedade</label>
+          <input type="radio" id="tipo-feira" name="como-entrega" value="feira">
+          <label for="tipo-feira">Leva à feira</label>
+
+          <input type="radio" id="tipo-propriedade" name="como-entrega" value="propriedade">
+          <label for="tipo-propriedade">A feira retira na propriedade</label>
         </fieldset>
 
-        <label for="obs">Observação</label>
-        <textarea id="obs" name="obs" rows="4"></textarea>
+        <label for="observacao">Observação</label>
+        <textarea id="observacao" name="observacao" rows="4"></textarea>
 
-        <input type="checkbox" id="aceite" name="aceite" value="sim" required>
-        <label for="aceite">Li e aceito as regras da feira</label>
+        <div>
+          <input type="checkbox" id="aceite" name="aceite" required>
+          <label for="aceite">Li e aceito as regras da feira</label>
+        </div>
       </fieldset>
-      
+
       <button type="submit">Enviar cadastro</button>
     </form>
-    
+
     <p role="status" aria-live="polite"></p>
   </main>
-  
+
   <footer class="rodape-site">
-    <p>AgroFeira - Paragominas, PA. Projeto de Laboratório de Produção de Software.</p>
+    <p>&copy; 2026 AgroFeira - Paragominas, Pará</p>
   </footer>
+
 </body>
 </html>
