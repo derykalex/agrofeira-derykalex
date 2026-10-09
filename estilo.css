@@ -1,313 +1,107 @@
-/* ==========================================================
-   CAMADA: BASE
-   ========================================================== */
-@layer base {
-  body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    font-family: var(--fonte-texto);
-    font-size: var(--tamanho-texto);
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  h1, h2, h3 {
-    font-family: var(--fonte-titulo);
-    font-weight: 700;
-  }
-
-  h1 { font-size: var(--tamanho-h1); }
-  h2 { font-size: var(--tamanho-h2); margin-top: 2rem; margin-bottom: 0.5rem; }
-  h3 { font-size: var(--tamanho-h3); margin-top: 1rem; }
-
-  p {
-    max-width: 34rem;
-    margin-bottom: 1rem;
-    overflow-wrap: break-word;
-  }
-
-  img, picture {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-
-  input, button, textarea, select {
-    font: inherit;
-  }
-
-  /* Casca da página - Mobile-First (Base para tela estreita) */
-  body.pagina-catalogo {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "cabecalho"
-      "menu"
-      "conteudo"
-      "lateral"
-      "rodape";
-    gap: var(--espaco-2);
-    padding: var(--espaco-2);
-  }
-
-  .pagina-catalogo .cabecalho-site { grid-area: cabecalho; }
-  .pagina-catalogo nav { grid-area: menu; }
-  .pagina-catalogo main { grid-area: conteudo; }
-  .pagina-catalogo aside { grid-area: lateral; }
-  .pagina-catalogo .rodape-site { grid-area: rodape; }
-
-  /* Acima de 42rem, a casca passa a ter três colunas */
-  @media (min-width: 42rem) {
-    body.pagina-catalogo {
-      grid-template-columns: 10rem minmax(0, 1fr) 14rem;
-      grid-template-areas:
-        "cabecalho cabecalho cabecalho"
-        "menu      conteudo    lateral"
-        "rodape    rodape      rodape";
-    }
-  }
-
-  /* Foco global visível do teclado */
-  :focus-visible {
-    outline: 2px solid var(--cor-foco);
-    outline-offset: 2px;
-  }
+/* Página inteira */
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  padding: var(--espaco-3) var(--espaco-2);
 }
 
-
-/* ==========================================================
-   CAMADA: COMPONENTES
-   ========================================================== */
-@layer componentes {
-  /* Cabeçalho e Rodapé */
-  .cabecalho-site {
-    background-color: var(--cor-marca);
-    color: var(--cor-sobre-marca);
-    padding: var(--espaco-2);
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
-
-  .cabecalho-site :focus-visible {
-    outline-color: var(--cor-sobre-marca);
-  }
-
-  nav {
-    background-color: var(--cor-marca);
-    padding: var(--espaco-2);
-    border-radius: var(--raio);
-  }
-
-  .menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--espaco-2);
-  }
-
-  .menu a {
-    color: var(--cor-sobre-marca);
-    text-decoration: none;
-  }
-
-  .menu a[aria-current="page"] {
-    font-weight: 700;
-  }
-
-  .rodape-site {
-    border-top: 1px solid var(--cor-borda);
-    color: var(--cor-texto-suave);
-    padding: var(--espaco-2);
-  }
-
-  /* Link de pular */
-  .pular {
-    position: absolute;
-    top: -10rem;
-    left: var(--espaco-1);
-    z-index: 2;
-    background-color: var(--cor-superficie);
-    color: var(--cor-marca);
-    padding: var(--espaco-1) var(--espaco-2);
-    border-radius: var(--raio);
-    text-decoration: none;
-  }
-
-  .pular:focus-visible {
-    top: var(--espaco-1);
-    outline-color: var(--cor-sobre-marca);
-  }
-
-  /* Barra de categorias (Flexbox) */
-  .barra-categorias {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--espaco-1);
-    list-style: none;
-    padding: 0;
-    margin-bottom: var(--espaco-3);
-  }
-
-  /* Lista de produtos (Grid) */
-  .lista-produtos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-    gap: var(--espaco-2);
-    list-style: none;
-    padding: 0;
-  }
-
-  /* Cartão de produto e Container Query */
-  .cartao-produto {
-    background-color: var(--cor-superficie);
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--raio);
-    box-shadow: var(--sombra);
-    padding: var(--espaco-2);
-    container-type: inline-size;
-    transition: transform 200ms ease-out, border-color 200ms ease-out;
-  }
-
-  .destaque {
-    grid-column: 1 / -1;
-  }
-
-  .cartao-produto article {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--espaco-1);
-    position: relative;
-  }
-
-  .cartao-produto h3 {
-    margin: 0;
-  }
-
-  .produtor {
-    color: var(--cor-texto-suave);
-    margin: 0;
-    font-size: 0.875rem;
-  }
-
-  .preco {
-    font-weight: 700;
-    margin: 0;
-  }
-
-  /* Botões gerais e de cartões */
-  button, .busca button {
-    background-color: var(--cor-marca);
-    color: var(--cor-sobre-marca);
-    border: none;
-    border-radius: var(--raio);
-    padding: 0.5em 1em;
-    cursor: pointer;
-    transition: background-color 200ms ease-out;
-  }
-
-  button:hover, .busca button:hover {
-    background-color: var(--cor-marca-forte);
-  }
-
-  button:disabled {
-    background-color: var(--cor-desligado);
-    color: var(--cor-sobre-desligado);
-  }
-
-  /* Container query - deita o cartão quando o espaço passa de 26rem */
-  @container (min-width: 26rem) {
-    .cartao-produto article {
-      display: grid;
-      grid-template-columns: 10rem 1fr;
-      gap: var(--espaco-2);
-    }
-    .cartao-produto img {
-      grid-row: span 3;
-      max-width: 100%;
-      height: auto;
-    }
-    .cartao-produto button {
-      grid-column: 1;
-    }
-  }
-
-  /* Formulários e Validação (:user-invalid) */
-  .formulario-cadastro input,
-  .formulario-cadastro select,
-  .formulario-cadastro textarea {
-    border: 2px solid var(--cor-texto-suave);
-    border-radius: var(--raio);
-    padding: 0.25em 0.5em;
-    width: 100%;
-    background-color: var(--cor-superficie);
-    color: var(--cor-texto);
-  }
-
-  .formulario-cadastro input:user-invalid {
-    border: 2px solid var(--cor-erro);
-  }
-
-  .formulario-cadastro input[required]:user-valid {
-    border: 2px solid var(--cor-marca);
-  }
-
-  /* :has() - Grupo do campo com erro */
-  .formulario-cadastro p:has(input:user-invalid) {
-    color: var(--cor-erro);
-    outline: 2px solid var(--cor-erro);
-    outline-offset: 4px;
-  }
-
-  /* :has() - Cartão cujo botão tem o foco visível do teclado */
-  .cartao-produto:has(button:focus-visible) {
-    outline: 2px solid var(--cor-foco);
-  }
-
-  /* Movimento no hover ou foco do cartão */
-  .cartao-produto:hover,
-  .cartao-produto:has(button:focus-visible) {
-    transform: translateY(-0.5rem);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .cartao-produto:hover,
-    .cartao-produto:has(button:focus-visible) {
-      transform: none;
-      border-color: var(--cor-marca);
-    }
-  }
-
-  /* Busca */
-  .busca {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--espaco-1);
-  }
-
-  .busca label {
-    width: 100%;
-  }
-
-  .busca input {
-    flex: 1;
-    border: 2px solid var(--cor-texto-suave);
-    border-radius: var(--raio);
-    padding: 0.25em 0.5em;
-    background-color: var(--cor-superficie);
-    color: var(--cor-texto);
-  }
+/* Títulos */
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
 }
 
+h1 { font-size: var(--tamanho-h1); }
+h2 { font-size: var(--tamanho-h2); color: var(--cor-marca); margin-top: var(--espaco-4); margin-bottom: var(--espaco-1); }
+h3 { font-size: var(--tamanho-h3); color: var(--cor-marca); margin-top: var(--espaco-3); margin-bottom: var(--espaco-1); }
 
-/* ==========================================================
-   CAMADA: UTILITÁRIOS
-   ========================================================== */
-@layer utilitarios {
-  .texto-erro {
-    color: var(--cor-erro);
-  }
+p {
+  max-width: 35rem;
+  margin-bottom: var(--espaco-2);
+}
+
+/* Cabeçalho e Menu */
+.cabecalho-site {
+  background-color: var(--cor-marca);
+  color: var(--cor-sobre-marca);
+  padding: var(--espaco-2);
+  border-radius: var(--raio);
+}
+
+.cabecalho-site h1 {
+  color: var(--cor-sobre-marca);
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--espaco-1);
+  display: flex;
+  gap: var(--espaco-2);
+}
+
+.menu a {
+  color: var(--cor-sobre-marca);
+  text-decoration: none;
+}
+
+.menu a[aria-current="page"] {
+  font-weight: bold;
+}
+
+/* Rodapé */
+.rodape-site {
+  border-top: 1px solid var(--cor-borda);
+  color: var(--cor-texto-suave);
+  padding: var(--espaco-2);
+  margin-top: var(--espaco-4);
+}
+
+/* Lista de produtos e cartões */
+.lista-produtos {
+  list-style: none;
+  padding: 0;
+}
+
+.cartao-produto {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: var(--espaco-2);
+  margin-bottom: var(--espaco-2);
+  max-width: 22rem;
+}
+
+/* Figura e legenda */
+.figura-destaque figcaption {
+  color: var(--cor-texto-suave);
+  margin-top: var(--espaco-1);
+}
+
+/* Busca e botões */
+.busca input[type="search"] {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 0.5em;
+  background-color: var(--cor-superficie);
+}
+
+.busca button, .formulario-cadastro button[type="submit"] {
+  background-color: var(--cor-marca);
+  color: var(--cor-sobre-marca);
+  border: none;
+  border-radius: var(--raio);
+  padding: 0.5em 1em;
+}
+
+/* Aviso */
+.aviso {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-marca);
+  border-radius: var(--raio);
+  padding: var(--espaco-2);
+  max-width: 35rem;
 }
