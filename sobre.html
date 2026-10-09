@@ -4,91 +4,99 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AgroFeira - Sobre</title>
-  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   
+  <!-- Folhas de estilo em camadas -->
+  <link rel="stylesheet" href="camadas.css">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="tokens.css">
-  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="componentes.css">
+  <link rel="stylesheet" href="utilitarios.css">
 </head>
 <body>
-
-  <a class="pular" href="#conteudo-principal">Pular para o conteúdo</a>
+  <!-- Link de pular -->
+  <a class="pular" href="#conteudo-sobre">Pular para o conteúdo</a>
 
   <header class="cabecalho-site">
     <h1>AgroFeira</h1>
-    <nav aria-label="Principal">
-      <ul class="menu">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="safra.html">Safra</a></li>
-        <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
-        <li><a href="sobre.html" aria-current="page">Sobre</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main id="conteudo-principal">
+  <!-- Navegação com o item Catálogo incluído -->
+  <nav aria-label="Principal">
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="safra.html">Safra</a></li>
+      <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
+      <li><a href="sobre.html" aria-current="page">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <main id="conteudo-sobre">
     <h2>Sobre a AgroFeira</h2>
     
-    <article class="depoimento">
-      <h3>Depoimento de Produtor</h3>
+    <!-- Depoimento (Article) -->
+    <article>
+      <h3>Palavra do produtor</h3>
       <figure>
-        <img src="cupuacu.jpg" width="330" height="247" loading="lazy" alt="Fruto de cupuaçu aberto mostrando a polpa branca">
+        <img src="cupuacu.jpg" alt="Fruto de cupuaçu partido ao meio mostrando polpa e sementes" width="330" height="247" loading="lazy">
         <figcaption>Foto: BjoernS, CC BY-SA 2.0 DE, via Wikimedia Commons.</figcaption>
       </figure>
       <blockquote>
-        <p>"Vender direto na feira mudou nossa renda e aproximou a gente de quem consome o que plantamos."</p>
+        <p>"Direto do produtor, sem atravessador. O preço é justo para quem consome e para quem cultiva."</p>
       </blockquote>
     </article>
 
+    <!-- Como vender na feira (Passo a passo ordenado) -->
     <section>
       <h3>Como vender na feira</h3>
       <ol>
-        <li>Apresentar a documentação e o CAF na associação.</li>
-        <li>Combinar os produtos disponíveis para a semana.</li>
-        <li>Trazer a produção nas sextas-feiras pela manhã.</li>
+        <li>Faça o cadastro online com seus dados e número do CAF.</li>
+        <li>Aguarde a validação da comissão da feira.</li>
+        <li>Traga seus produtos nas sextas-feiras pela manhã.</li>
       </ol>
     </section>
 
+    <!-- Glossário (Lista de Definição) -->
     <section>
-      <h3>Glossário da Feira</h3>
+      <h3>Glossário de termos</h3>
       <dl>
         <dt>Saca</dt>
-        <dd>Unidade de medida padrão correspondente a 60 kg de produtos como mandioca.</dd>
+        <dd>Unidade tradicional de medida correspondente a 60 kg.</dd>
         <dt>Cacho</dt>
-        <dd>Forma de comercialização in natura para bananas.</dd>
+        <dd>Forma de comercialização em massa para bananas e outras frutas.</dd>
         <dt>Rasa</dt>
-        <dd>Medida tradicional utilizada para a venda de açaí.</dd>
+        <dd>Medida tradicional usada para a comercialização de açaí na região.</dd>
       </dl>
     </section>
 
+    <!-- Perguntas Frequentes (Acordeão Nativo) -->
     <section>
-      <h3>Perguntas Frequentes</h3>
-      
-      <details name="faq" class="pergunta">
-        <summary>Como funciona a entrega dos produtos?</summary>
-        <p>O produtor pode trazer diretamente à feira central ou solicitar a retirada na propriedade.</p>
+      <h3>Perguntas frequentes</h3>
+      <details name="faq">
+        <summary>Como funciona a entrega?</summary>
+        <p>A retirada é feita diretamente na praça central, toda sexta das 6h às 11h.</p>
       </details>
-
-      <details name="faq" class="pergunta">
-        <summary>Qualquer produtor pode participar?</summary>
-        <p>Sim, desde que faça parte da agricultura familiar da região e possua o CAF ativo.</p>
+      <details name="faq">
+        <summary>Preciso ter CNPJ para vender?</summary>
+        <p>Não, basta possuir a declaração da agricultura familiar (CAF).</p>
       </details>
-
-      <details name="faq" class="pergunta">
-        <summary>Quais formas de pagamento são aceitas?</summary>
-        <p>Dinheiro em espécie, PIX e transferências diretas aos produtores locais.</p>
+      <details name="faq">
+        <summary>Aceita cartão?</summary>
+        <p>Muitos produtores aceitam PIX e cartão, mas é recomendável trazer dinheiro trocado.</p>
       </details>
     </section>
 
-    <img src="enfeite.png" width="330" height="93" alt="">
+    <!-- Imagem Decorativa com alt vazio -->
+    <img src="enfeite.png" alt="">
   </main>
 
   <footer class="rodape-site">
-    <p>&copy; 2026 AgroFeira - Paragominas, Pará</p>
+    <p>AgroFeira — da roça para a mesa, em Paragominas.</p>
   </footer>
-
 </body>
 </html>

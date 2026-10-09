@@ -7,6 +7,7 @@
 strong {
   color: var(--cor-texto-suave);
 }
+
 /* Caso 2 */
 /* Previsão: .busca label vence label [for] porque classe + tag tem maior especificidade que tag + atributo, aplicando a cor da marca. */
 /* Conferido: O painel de estilos mostrou a regra .busca label ativa e a regra label [for] riscada. */
@@ -16,6 +17,7 @@ strong {
 label [for] {
   color: var(--cor-texto-suave);
 }
+
 /* Caso 3 */
 /* Previsão: footer p vence .rodape-site porque o seletor descendente direto sobrepõe o estilo herdado do elemento pai. */
 /* Conferido: O painel de estilos registrou a regra footer p como ativa para a cor do parágrafo do rodapé. */

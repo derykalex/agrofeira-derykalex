@@ -1,28 +1,52 @@
-:root {
-  /* Cores */
-  --cor-fundo: #f4f6f4;
-  --cor-superficie: #ffffff;
-  --cor-texto: #1f2a1f;
-  --cor-texto-suave: #4a5a48;
-  --cor-marca: #2b5e3a;
-  --cor-sobre-marca: #ffffff;
-  --cor-borda: #d1dcd3;
+@layer base {
+  :root {
+    --cor-fundo: #fbf8f1;
+    --cor-superficie: #ffffff;
+    --cor-texto: #1f2a1f;
+    --cor-texto-suave: #4a5a48; /* 5.95:1 sobre o fundo */
+    --cor-marca: #2e6b30;
+    --cor-sobre-marca: #ffffff; /* 6.43:1 sobre a marca */
+    --cor-borda: #d8d0bf;
+    --cor-marca-forte: #1f4a21; /* 10.2:1 sobre a marca */
+    --cor-foco: #1d4ed8; /* 6.3:1 sobre o fundo */
+    --cor-desligado: #e4ded1;
+    --cor-sobre-desligado: #525c4f; /* 5.2:1 sobre o desligado */
+    --cor-erro: #b42318; /* 6.2:1 sobre o fundo */
 
-  /* Letras */
-  --fonte-texto: system-ui, sans-serif;
-  --fonte-titulo: "Lora", serif;
+    --fonte-texto: system-ui, sans-serif;
+    --fonte-titulo: "Lora", serif;
+    --tamanho-texto: 1rem;
+    --tamanho-h3: 1.25rem;
+    --tamanho-h2: 1.5rem;
+    --tamanho-h1: clamp(1.75rem, 1rem + 3vw, 3rem);
 
-  /* Tamanhos (Escala modular com multiplicador 1.25) */
-  --tamanho-texto: 1rem;
-  --tamanho-h3: 1.25rem;
-  --tamanho-h2: 1.563rem;
-  --tamanho-h1: 1.953rem;
+    --espaco-1: 0.5rem;
+    --espaco-2: 1rem;
+    --espaco-3: 1.5rem;
+    --espaco-4: 2rem;
 
-  /* Espaços, raio e sombra */
-  --espaco-1: 0.5rem;
-  --espaco-2: 1rem;
-  --espaco-3: 1.5rem;
-  --espaco-4: 2rem;
-  --raio: 12px;
-  --sombra: 0 2px 6px rgb(0 0 0 / 15%);
+    --raio: 12px;
+    --sombra: 0 2px 6px rgb(0 0 0 / 15%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --cor-fundo: #121a13; /* 15.07:1 sobre o texto */
+      --cor-superficie: #1b251c;
+      --cor-texto: #e6efe4;
+      --cor-texto-suave: #b2c1af; /* 8.38:1 sobre a superfície */
+      --cor-marca: #86c98a;
+      --cor-sobre-marca: #0f2410; /* 8.4:1 sobre a marca */
+      --cor-borda: #3a4a3b;
+      --cor-marca-forte: #a8dcab;
+      --cor-foco: #93c5fd; /* 8.8:1 sobre a superfície */
+      --cor-desligado: #2a342b;
+      --cor-sobre-desligado: #a3ae9f;
+      --cor-erro: #ff8a80;
+    }
+  }
+
+  :root {
+    color-scheme: light dark;
+  }
 }
