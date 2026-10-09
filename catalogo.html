@@ -4,12 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AgroFeira - catálogo</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  
-  <!-- Folhas de estilo em camadas -->
   <link rel="stylesheet" href="camadas.css">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="tokens.css">
@@ -18,15 +12,12 @@
   <link rel="stylesheet" href="utilitarios.css">
 </head>
 <body class="pagina-catalogo">
-  <!-- Link de pular -->
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-  <!-- Cabeçalho -->
   <header class="cabecalho-site">
     <h1>AgroFeira</h1>
   </header>
 
-  <!-- Navegação (Menu Principal) -->
   <nav aria-label="Principal">
     <ul class="menu">
       <li><a href="index.html">Início</a></li>
@@ -37,100 +28,39 @@
     </ul>
   </nav>
 
-  <!-- Conteúdo Principal do Catálogo -->
   <main id="conteudo">
     <h2>Produtos da semana</h2>
     <p>Colhido nos sítios da região e vendido direto, sem atravessador.</p>
 
-    <!-- Barra de Categorias -->
-    <nav aria-label="Filtrar por categoria">
-      <ul class="barra-categorias">
-        <li><button type="button">Todos</button></li>
-        <li><button type="button">Frutas</button></li>
-        <li><button type="button">Polpas</button></li>
-        <li><button type="button">Farinhas</button></li>
-        <li><button type="button">Temperos</button></li>
-        <li><button type="button">Hortaliças</button></li>
-        <li><button type="button">Amêndoas</button></li>
-      </ul>
-    </nav>
-
-    <!-- Lista de Produtos com o cartão em Destaque -->
     <ul class="lista-produtos">
-      <!-- Cartão em Destaque (Ocupa a linha inteira via .destaque) -->
       <li class="cartao-produto destaque">
         <article>
-          <img src="cacau.jpg" alt="Mãos segurando cacau em amêndoa aberto" width="640" height="480">
+          <img src="cacau.jpg" alt="Cacau em amêndoa" width="640" height="480">
           <h3>Cacau em amêndoa</h3>
-          <p class="produtor">Sítio Cacau do Capim, beira do rio Capim</p>
+          <p class="produtor">Sítio Cacau do Capim</p>
           <p class="preco">R$ 25,00 o quilo</p>
           <button type="button">Adicionar</button>
         </article>
       </li>
-
-      <!-- Cartões normais -->
       <li class="cartao-produto">
         <article>
-          <img src="acai.jpg" alt="Tigela de açaí batido, com duas colheres de plástico" width="640" height="480">
+          <img src="acai.jpg" alt="Açaí médio" width="640" height="480">
           <h3>Açaí médio</h3>
-          <p class="produtor">Sítio Boa Vista, Colônia do Uraim</p>
+          <p class="produtor">Sítio Boa Vista</p>
           <p class="preco">R$ 12,00 o litro</p>
-          <button type="button">Adicionar</button>
-        </article>
-      </li>
-
-      <li class="cartao-produto">
-        <article>
-          <img src="farinha.jpg" alt="Pote de farinha de mandioca sobre a mesa" width="640" height="480">
-          <h3>Farinha d'água</h3>
-          <p class="produtor">Casa de Farinha São José, Comunidade Nova Vida</p>
-          <p class="preco">R$ 90,00 a lata</p>
-          <button type="button" disabled>Esgotado</button>
-        </article>
-      </li>
-
-      <li class="cartao-produto">
-        <article>
-          <img src="banana.jpg" alt="Cacho de banana-prata exposto na feira" width="640" height="480">
-          <h3>Banana-prata</h3>
-          <p class="produtor">Sítio Três Irmãos, Colônia do Uraim</p>
-          <p class="preco">R$ 8,00 a dúzia</p>
-          <button type="button">Adicionar</button>
-        </article>
-      </li>
-
-      <li class="cartao-produto">
-        <article>
-          <img src="pimenta.jpg" alt="Grãos de pimenta-do-reino pretos espalhados" width="640" height="480">
-          <h3>Pimenta-do-reino</h3>
-          <p class="produtor">Sítio Santa Luzia, beira do rio Capim</p>
-          <p class="preco">R$ 30,00 o quilo</p>
-          <button type="button">Adicionar</button>
-        </article>
-      </li>
-
-      <li class="cartao-produto">
-        <article>
-          <img src="cupuacu-640.jpg" alt="Fruto de cupuaçu aberto ao meio" width="640" height="480">
-          <h3>Polpa de cupuaçu</h3>
-          <p class="produtor">Sítio Boa Vista, Colônia do Uraim</p>
-          <p class="preco">R$ 22,00 o quilo</p>
           <button type="button">Adicionar</button>
         </article>
       </li>
     </ul>
   </main>
 
-  <!-- Barra Lateral -->
   <aside>
     <h2>Onde e quando</h2>
     <p>Praça central de Paragominas, toda sexta, das 6h às 11h.</p>
   </aside>
 
-  <!-- Rodapé -->
   <footer class="rodape-site">
     <p>AgroFeira — da roça para a mesa, em Paragominas.</p>
-    <p><small>Fotos dos produtos via Wikimedia Commons (licenças CC BY / CC0).</small></p>
   </footer>
 </body>
 </html>
