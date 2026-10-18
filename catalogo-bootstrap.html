@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AgroFeira - Catálogo Bootstrap</title>
+    <!-- Link oficial do Bootstrap 5.3.8 via CDN com integrity e crossorigin -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRI14kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Folhas de tokens e customização do projeto -->
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="agrofeira-bootstrap.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Cabeçalho -->
+      <header class="d-flex justify-content-between align-items-center py-3 mb-4">
+        <h1 class="display-6 mb-0">AgroFeira</h1>
+        <a href="index.html" class="text-decoration-none">Início</a>
+      </header>
+
+      <!-- Grade Principal e Lateral -->
+      <div class="row g-4">
+        <main class="col-lg-9">
+          <!-- Alerta -->
+          <div class="alert alert-warning" role="alert">
+            Entregas só às sextas-feiras. Pedidos até quinta, às 18h.
+          </div>
+          
+          <h2 class="mb-3">Produtos da semana</h2>
+          <p class="lead">O que chegou das colônias de Paragominas nesta semana.</p>
+
+          <!-- Grelha de Cartões (7 produtos) -->
+          <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 list-unstyled">
+            <!-- Produto 1: Açaí (Com Selo) -->
+            <li class="col">
+              <article class="card h-100">
+                <img src="acai.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Tigela de açaí batido, com duas colheres de plástico">
+                <div class="card-body">
+                  <p class="badge text-bg-success">Safra nova</p>
+                  <h3 class="card-title h5">Açaí médio</h3>
+                  <p class="card-text text-body-secondary">Sítio Boa Vista, Colônia do Uraim</p>
+                  <p class="card-text fw-bold">R$ 12,00 o litro</p>
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
+              </article>
+            </li>
+            <!-- Produto 2: Farinha -->
+            <li class="col">
+              <article class="card h-100">
+                <img src="farinha.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Pote de farinha de mandioca sobre a mesa">
+                <div class="card-body">
+                  <h3 class="card-title h5">Farinha d'água</h3>
+                  <p class="card-text text-body-secondary">Casa de Farinha São José, Comunidade Nova Vida</p>
+                  <p class="card-text fw-bold">R$ 90,00 a lata</p>
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
+              </article>
+            </li>
+            <!-- Produto 3: Banana -->
+            <li class="col">
+              <article class="card h-100">
+                <img src="banana.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Cacho de bananas prata sobre mesa de madeira">
+                <div class="card-body">
+                  <h3 class="card-title h5">Banana-prata</h3>
+                  <p class="card-text text-body-secondary">Sítio Três Irmãos, Colônia do Uraim</p>
+                  <p class="card-text fw-bold">R$ 8,00 a dúzia</p>
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
+              </article>
+            </li>
+            <!-- Produto 4: Pimenta -->
+            <li class="col">
+              <article class="card h-100">
+                <img src="pimenta.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Grãos de pimenta-do-reino espalhados em prato branco">
+                <div class="card-body">
+                  <h3 class="card-title h5">Pimenta-do-reino</h3>
+                  <p class="card-text text-body-secondary">Sítio Santa Luzia, beira do rio Capim</p>
+                  <p class="card-text fw-bold">R$ 30,00 o quilo</p>
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
+              </article>
+            </li>
+            <!-- Produto 5: Cacau -->
+            <li class="col">
+              <article class="card h-100">
+                <img src="cacau.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Fruto de cacau aberto mostrando as amêndoas brancas">
+                <div class="card-body">
+                  <h3 class="card-title h5">Cacau em amêndoa</h3>
+                  <p class="card-text text-body-secondary">Sítio Cacau do Capim, beira do rio Capim</p>
+                  <p class="card-text fw-bold">R$ 25,00 o quilo</p>
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
+              </article>
+            </li>
+            <!-- Produto 6: Cupuaçu -->
+            <li class="col">
+              <article class="card h-100">
+                <img src="cupuacu-640.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Fruto de cupuaçu inteiro sobre fundo neutro">
+                <div class="card-body">
+                  <h3 class="card-title h5">Polpa de cupuaçu</h3>
+                  <p class="card-text text-body-secondary">Sítio Boa Vista, Colônia do Uraim</p>
+                  <p class="card-text fw-bold">R$ 22,00 o quilo</p>
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
+              </article>
+            </li>
+            <!-- Produto 7: Jambu -->
+            <li class="col">
+              <article class="card h-100">
+                <img src="jambu.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Ramo de jambu com flores amarelas">
+                <div class="card-body">
+                  <h3 class="card-title h5">Jambu</h3>
+                  <p class="card-text text-body-secondary">Horta da Dona Rosa, Colônia do Uraim</p>
+                  <p class="card-text fw-bold">R$ 4,00 o maço</p>
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </main>
+
+        <!-- Barra Lateral -->
+        <aside class="col-lg-3 d-none d-lg-block">
+          <h2 class="h5">Mais pedidos</h2>
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item">Açaí médio</li>
+            <li class="list-group-item">Farinha d'água</li>
+            <li class="list-group-item">Polpa de cupuaçu</li>
+          </ol>
+        </aside>
+      </div>
+
+      <!-- Rodapé -->
+      <footer class="py-4 text-body-secondary">
+        <p>AgroFeira — da roça para a mesa, em Paragominas.</p>
+        <p><small>Fotos dos produtos: Wikimedia Commons (licenças CC e CC0).</small></p>
+      </footer>
+    </div>
+  </body>
+</html>
