@@ -6,73 +6,107 @@
     <title>Relatório Comparativo e Descritivo - AgroFeira</title>
     <!-- Link oficial do Bootstrap 5.3.8 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRI14kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      body { background-color: #f8f9fa; color: #212529; }
+      .card-section { border: none; border-radius: 0.75rem; transition: transform 0.2s; }
+      .table th { background-color: #2e6b30 !important; color: white; }
+      figure img { border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    </style>
   </head>
-  <body class="bg-light">
+  <body>
     <div class="container py-5">
+      
       <!-- Cabeçalho Institucional -->
-      <header class="mb-5 text-center">
-        <h1 class="display-6 fw-bold">Relatório Comparativo e Descritivo: AgroFeira</h1>
-        <p class="text-muted">Estudo Comparativo entre o Catálogo Autoral e o Catálogo em Bootstrap</p>
-        <p class="fw-semibold text-success">Aluno: Alex da Silva Oliveira | Matrícula: 2024008859</p>
+      <header class="mb-5 text-center bg-white p-5 rounded-4 shadow-sm border-bottom border-success border-4">
+        <h1 class="display-5 fw-bold text-success mb-2">AgroFeira</h1>
+        <h2 class="h4 text-secondary mb-3">Relatório Comparativo e Descritivo de Desenvolvimento Web</h2>
+        <p class="text-muted mb-1">Estudo Comparativo entre o Catálogo Autoral e o Catálogo em Bootstrap</p>
+        <div class="badge bg-success fs-6 mt-3 px-3 py-2">
+          Discente: Alex da Silva Oliveira | Matrícula: 2024008859
+        </div>
       </header>
 
-      <!-- Secção: Identificação e Links de Acesso do Projeto -->
-      <section class="mb-4 bg-white p-4 rounded shadow-sm">
-        <h2 class="h5 text-primary mb-3">1. Identificação e Endereços Públicos do Projeto</h2>
-        <p>Abaixo encontram-se os links de acesso direto a todas as páginas e recursos desenvolvidos e publicados no GitHub Pages:</p>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><strong>Repositório Oficial (GitHub):</strong> <a href="https://github.com/derykalex/agrofeira-derykalex" target="_blank">https://github.com/derykalex/agrofeira-derykalex</a></li>
-          <li class="list-group-item"><strong>Página Principal (Início):</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/" target="_blank">https://derykalex.github.io/agrofeira-derykalex/</a></li>
-          <li class="list-group-item"><strong>Catálogo Autoral (Atividades Anteriores):</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/catalogo.html" target="_blank">https://derykalex.github.io/agrofeira-derykalex/catalogo.html</a></li>
-          <li class="list-group-item"><strong>Catálogo em Bootstrap (Atividade Atual):</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/catalogo-bootstrap.html" target="_blank">https://derykalex.github.io/agrofeira-derykalex/catalogo-bootstrap.html</a></li>
-          <li class="list-group-item"><strong>Página Sobre a Feira:</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/sobre.html" target="_blank">https://derykalex.github.io/agrofeira-derykalex/sobre.html</a></li>
-          <li class="list-group-item"><strong>Cadastro de Produtor:</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/cadastro-produtor.html" target="_blank">https://derykalex.github.io/agrofeira-derykalex/cadastro-produtor.html</a></li>
-          <li class="list-group-item"><strong>Calendário de Safra:</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/safra.html" target="_blank">https://derykalex.github.io/agrofeira-derykalex/safra.html</a></li>
-        </ul>
+      <!-- Secção 1: Identificação e Links de Acesso do Projeto -->
+      <section class="card card-section shadow-sm mb-4 p-4 bg-white">
+        <h3 class="h5 text-success fw-bold mb-3 border-bottom pb-2">1. Identificação e Endereços Públicos do Projeto</h3>
+        <p class="text-muted small">Links de acesso direto a todas as páginas e recursos publicados no GitHub Pages:</p>
+        <div class="list-group list-group-flush">
+          <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap py-2">
+            <strong>Repositório Oficial (GitHub):</strong> 
+            <a href="https://github.com/derykalex/agrofeira-derykalex" target="_blank" class="text-decoration-none">github.com/derykalex/agrofeira-derykalex</a>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap py-2">
+            <strong>Página Principal (Início):</strong> 
+            <a href="https://derykalex.github.io/agrofeira-derykalex/" target="_blank" class="text-decoration-none">Home do Projeto</a>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap py-2">
+            <strong>Catálogo Autoral:</strong> 
+            <a href="https://derykalex.github.io/agrofeira-derykalex/catalogo.html" target="_blank" class="text-decoration-none">catalogo.html</a>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap py-2">
+            <strong>Catálogo em Bootstrap:</strong> 
+            <a href="https://derykalex.github.io/agrofeira-derykalex/catalogo-bootstrap.html" target="_blank" class="text-decoration-none">catalogo-bootstrap.html</a>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap py-2">
+            <strong>Relatório Comparativo (Atual):</strong> 
+            <a href="https://derykalex.github.io/agrofeira-derykalex/comparativo.html" target="_blank" class="text-decoration-none fw-bold text-success">comparativo.html</a>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap py-2">
+            <strong>Página Sobre a Feira:</strong> 
+            <a href="https://derykalex.github.io/agrofeira-derykalex/sobre.html" target="_blank" class="text-decoration-none">sobre.html</a>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap py-2">
+            <strong>Cadastro de Produtor:</strong> 
+            <a href="https://derykalex.github.io/agrofeira-derykalex/cadastro-produtor.html" target="_blank" class="text-decoration-none">cadastro-produtor.html</a>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap py-2">
+            <strong>Calendário de Safra:</strong> 
+            <a href="https://derykalex.github.io/agrofeira-derykalex/safra.html" target="_blank" class="text-decoration-none">safra.html</a>
+          </div>
+        </div>
       </section>
 
-      <!-- Secção: Descrição Detalhada do que Foi Feito (Trabalhos Anteriores e Atuais) -->
-      <section class="mb-4 bg-white p-4 rounded shadow-sm">
-        <h2 class="h5 text-primary mb-3">2. Descrição Geral do Desenvolvimento do Sistema</h2>
-        <p>No âmbito do Laboratório de Produção de Software, o projeto <strong>AgroFeira</strong> evoluiu através de etapas estruturadas:</p>
-        <ul>
-          <li><strong>Estruturação Semântica (HTML5):</strong> Criação das páginas principais garantindo acessibilidade, leitores de tela e marcação semântica adequada (<code>header</code>, <code>main</code>, <code>footer</code>, <code>article</code>, <code>aside</code>).</li>
-          <li><strong>Estilização Nativa e Tokens CSS:</strong> Nas atividades anteriores, todo o comportamento visual, grade responsiva e tema escuro foram programados manualmente à mão (composto por 340 linhas distribuídas em módulos como <code>reset.css</code>, <code>tokens.css</code>, <code>base.css</code> e <code>componentes.css</code>). O ficheiro <code>tokens.css</code> concentrou todas as decisões de design em variáveis globais (<code>:root</code>).</li>
-          <li><strong>Adoção do Framework Bootstrap 5.3.8:</strong> Na etapa atual, a mesma estrutura de catálogo foi reconstruída utilizando o framework Bootstrap via CDN oficial (jsDelivr), aproveitando o sistema pré-fabricado de grelha (<code>container</code>, <code>row</code>, <code>col</code>) e componentes prontos (<code>card</code>, <code>btn</code>, <code>alert</code>, <code>badge</code>, <code>list-group</code>).</li>
-          <li><strong>Customização Baseada em Variáveis:</strong> Para alinhar o Bootstrap à identidade visual da AgroFeira sem recorrer a modificações diretas no framework ou uso excessivo de <code>!important</code>, criou-se o ficheiro <code>agrofeira-bootstrap.css</code>, ligando as variáveis nativas do framework (<code>--bs-*</code>) diretamente aos tokens de design do projeto.</li>
+      <!-- Secção 2: Descrição Geral do Desenvolvimento -->
+      <section class="card card-section shadow-sm mb-4 p-4 bg-white">
+        <h3 class="h5 text-success fw-bold mb-3 border-bottom pb-2">2. Descrição Geral do Desenvolvimento do Sistema</h3>
+        <p class="text-secondary">No âmbito do Laboratório de Produção de Software, o projeto <strong>AgroFeira</strong> evoluiu através de etapas estruturadas:</p>
+        <ul class="list-unstyled">
+          <li class="mb-2">🔹 <strong>Estruturação Semântica (HTML5):</strong> Criação das páginas principais garantindo acessibilidade, leitores de tela e marcação semântica adequada (<code>header</code>, <code>main</code>, <code>footer</code>, <code>article</code>, <code>aside</code>).</li>
+          <li class="mb-2">🔹 <strong>Estilização Nativa e Tokens CSS:</strong> Nas atividades anteriores, todo o comportamento visual, grade responsiva e tema escuro foram programados manualmente à mão (composto por 340 linhas distribuídas em módulos como <code>reset.css</code>, <code>tokens.css</code>, <code>base.css</code> e <code>componentes.css</code>). O ficheiro <code>tokens.css</code> concentrou todas as decisões de design em variáveis globais (<code>:root</code>).</li>
+          <li class="mb-2">🔹 <strong>Adoção do Framework Bootstrap 5.3.8:</strong> Na etapa atual, a mesma estrutura de catálogo foi reconstruída utilizando o framework Bootstrap via CDN oficial (jsDelivr), aproveitando o sistema pré-fabricado de grelha (<code>container</code>, <code>row</code>, <code>col</code>) e componentes prontos (<code>card</code>, <code>btn</code>, <code>alert</code>, <code>badge</code>, <code>list-group</code>).</li>
+          <li class="mb-2">🔹 <strong>Customização Baseada em Variáveis:</strong> Para alinhar o Bootstrap à identidade visual da AgroFeira sem recorrer a modificações diretas no framework ou uso excessivo de <code>!important</code>, criou-se o ficheiro <code>agrofeira-bootstrap.css</code>, ligando as variáveis nativas do framework (<code>--bs-*</code>) diretamente aos tokens de design do projeto.</li>
         </ul>
       </section>
 
       <!-- Secção 3: O catálogo em três larguras -->
-      <section class="mb-5 bg-white p-4 rounded shadow-sm">
-        <h2 class="h4 mb-3 text-primary">3. O catálogo em três larguras</h2>
-        <p>Análise do comportamento responsivo do catálogo em Bootstrap nas larguras de 360 px, 768 px e 1200 px.</p>
+      <section class="card card-section shadow-sm mb-4 p-4 bg-white">
+        <h3 class="h5 text-success fw-bold mb-3 border-bottom pb-2">3. O catálogo em três larguras</h3>
+        <p class="text-muted small">Análise do comportamento responsivo do catálogo em Bootstrap nas larguras de 360 px, 768 px e 1200 px.</p>
         
-        <div class="row g-4 mb-4">
+        <div class="row g-4 mt-2">
           <div class="col-md-6">
             <figure class="figure w-100">
-              <img src="captura-1-360.png" class="figure-img img-fluid rounded border w-100" alt="Catálogo em Bootstrap a 360px">
-              <figcaption class="figure-caption text-center">Captura 1 — Catálogo em Bootstrap a 360 px (1 coluna, sem lista lateral).</figcaption>
+              <img src="captura-1-360.png" class="figure-img img-fluid border w-100" alt="Catálogo em Bootstrap a 360px">
+              <figcaption class="figure-caption text-center fw-semibold mt-2">Captura 1 — Catálogo em Bootstrap a 360 px (1 coluna, sem lista lateral).</figcaption>
             </figure>
           </div>
           <div class="col-md-6">
             <figure class="figure w-100">
-              <img src="captura-2-1200-antes.png" class="figure-img img-fluid rounded border w-100" alt="Catálogo em Bootstrap a 1200px antes da customização">
-              <figcaption class="figure-caption text-center">Captura 2 — Catálogo em Bootstrap a 1200 px (3 colunas, com lista lateral).</figcaption>
+              <img src="captura-2-1200-antes.png" class="figure-img img-fluid border w-100" alt="Catálogo em Bootstrap a 1200px antes da customização">
+              <figcaption class="figure-caption text-center fw-semibold mt-2">Captura 2 — Catálogo em Bootstrap a 1200 px (3 colunas, com lista lateral).</figcaption>
             </figure>
           </div>
         </div>
       </section>
 
       <!-- Secção 4: A customização -->
-      <section class="mb-5 bg-white p-4 rounded shadow-sm">
-        <h2 class="h4 mb-3 text-primary">4. A customização e as decisões visuais</h2>
-        <p>Documentação da aplicação das decisões visuais do projeto sobre o framework através de tokens e variáveis CSS.</p>
+      <section class="card card-section shadow-sm mb-4 p-4 bg-white">
+        <h3 class="h5 text-success fw-bold mb-3 border-bottom pb-2">4. A customização e as decisões visuais</h3>
+        <p class="text-muted small">Documentação da aplicação das decisões visuais do projeto sobre o framework através de tokens e variáveis CSS.</p>
 
-        <!-- Tabela de Variáveis -->
-        <div class="table-responsive mb-4">
-          <table class="table table-bordered table-striped">
-            <thead class="table-dark">
+        <div class="table-responsive my-3">
+          <table class="table table-bordered table-striped align-middle">
+            <thead>
               <tr>
                 <th>Variável Alterada</th>
                 <th>Valor / Token</th>
@@ -109,32 +143,34 @@
           </table>
         </div>
 
-        <p><strong>Por que <code>--bs-primary</code> sozinha no root não muda o botão:</strong> A regra <code>.btn-primary</code> do Bootstrap define diretamente a propriedade <code>--bs-btn-bg</code> com um valor fixo, ignorando a variável global <code>--bs-primary</code>. Para customizar o botão sem recompilar o Sass, é necessário redefinir explicitamente as variáveis do componente (<code>--bs-btn-bg</code> e irmãs) na regra <code>.btn-primary</code>.</p>
+        <p class="bg-light p-3 rounded border-start border-success border-4 small">
+          <strong>Por que <code>--bs-primary</code> sozinha no root não muda o botão:</strong> A regra <code>.btn-primary</code> do Bootstrap define diretamente a propriedade <code>--bs-btn-bg</code> com um valor fixo, ignorando a variável global <code>--bs-primary</code>. Para customizar o botão sem recompilar o Sass, é necessário redefinir explicitamente as variáveis do componente (<code>--bs-btn-bg</code> e irmãs) na regra <code>.btn-primary</code>.
+        </p>
 
-        <div class="row g-4 mb-4">
+        <div class="row g-4 mt-2">
           <div class="col-md-6">
             <figure class="figure w-100">
-              <img src="captura-3-botao.png" class="figure-img img-fluid rounded border w-100" alt="Regra do botão no Styles">
-              <figcaption class="figure-caption text-center">Captura 3 — Inspeção da regra <code>.btn-primary</code> no F12.</figcaption>
+              <img src="captura-3-botao.png" class="figure-img img-fluid border w-100" alt="Regra do botão no Styles">
+              <figcaption class="figure-caption text-center fw-semibold mt-2">Captura 3 — Inspeção da regra <code>.btn-primary</code> no F12.</figcaption>
             </figure>
           </div>
           <div class="col-md-6">
             <figure class="figure w-100">
-              <img src="captura-4-1200-depois.png" class="figure-img img-fluid rounded border w-100" alt="Catálogo customizado a 1200px">
-              <figcaption class="figure-caption text-center">Captura 4 — Catálogo a 1200 px com a customização aplicada.</figcaption>
+              <img src="captura-4-1200-depois.png" class="figure-img img-fluid border w-100" alt="Catálogo customizado a 1200px">
+              <figcaption class="figure-caption text-center fw-semibold mt-2">Captura 4 — Catálogo a 1200 px com a customização aplicada.</figcaption>
             </figure>
           </div>
         </div>
       </section>
 
       <!-- Secção 5: As medições -->
-      <section class="mb-5 bg-white p-4 rounded shadow-sm">
-        <h2 class="h4 mb-3 text-primary">5. As medições de desempenho e rede</h2>
-        <p>Medição de desempenho e transferência realizada no Chrome com a cache desligada (largura da área da página: 1210 × 2579 px).</p>
+      <section class="card card-section shadow-sm mb-4 p-4 bg-white">
+        <h3 class="h5 text-success fw-bold mb-3 border-bottom pb-2">5. As medições de desempenho e rede</h3>
+        <p class="text-muted small">Medição de desempenho e transferência realizada no Chrome com a cache desligada (largura da área da página: 1210 × 2579 px).</p>
 
-        <div class="table-responsive mb-4">
-          <table class="table table-bordered table-striped">
-            <thead class="table-dark">
+        <div class="table-responsive my-3">
+          <table class="table table-bordered table-striped align-middle">
+            <thead>
               <tr>
                 <th>Critério</th>
                 <th>Autoral</th>
@@ -186,37 +222,37 @@
           </table>
         </div>
 
-        <div class="row g-4 mb-4">
+        <div class="row g-4 mt-2">
           <div class="col-md-6">
             <figure class="figure w-100">
-              <img src="captura-5-rede-autoral.png" class="figure-img img-fluid rounded border w-100" alt="Rede Autoral">
-              <figcaption class="figure-caption text-center">Captura 5 — Aba Network (Versão Autoral).</figcaption>
+              <img src="captura-5-rede-autoral.png" class="figure-img img-fluid border w-100" alt="Rede Autoral">
+              <figcaption class="figure-caption text-center fw-semibold mt-2">Captura 5 — Aba Network (Versão Autoral).</figcaption>
             </figure>
           </div>
           <div class="col-md-6">
             <figure class="figure w-100">
-              <img src="captura-6-rede-bootstrap.png" class="figure-img img-fluid rounded border w-100" alt="Rede Bootstrap">
-              <figcaption class="figure-caption text-center">Captura 6 — Aba Network (Versão Bootstrap).</figcaption>
+              <img src="captura-6-rede-bootstrap.png" class="figure-img img-fluid border w-100" alt="Rede Bootstrap">
+              <figcaption class="figure-caption text-center fw-semibold mt-2">Captura 6 — Aba Network (Versão Bootstrap).</figcaption>
             </figure>
           </div>
           <div class="col-md-6">
             <figure class="figure w-100">
-              <img src="captura-7-lcp-autoral.png" class="figure-img img-fluid rounded border w-100" alt="LCP Autoral">
-              <figcaption class="figure-caption text-center">Captura 7 — Desempenho LCP (Versão Autoral - 4ª carga).</figcaption>
+              <img src="captura-7-lcp-autoral.png" class="figure-img img-fluid border w-100" alt="LCP Autoral">
+              <figcaption class="figure-caption text-center fw-semibold mt-2">Captura 7 — Desempenho LCP (Versão Autoral - 4ª carga).</figcaption>
             </figure>
           </div>
           <div class="col-md-6">
             <figure class="figure w-100">
-              <img src="captura-8-lcp-bootstrap.png" class="figure-img img-fluid rounded border w-100" alt="LCP Bootstrap">
-              <figcaption class="figure-caption text-center">Captura 8 — Desempenho LCP (Versão Bootstrap - 3ª carga).</figcaption>
+              <img src="captura-8-lcp-bootstrap.png" class="figure-img img-fluid border w-100" alt="LCP Bootstrap">
+              <figcaption class="figure-caption text-center fw-semibold mt-2">Captura 8 — Desempenho LCP (Versão Bootstrap - 3ª carga).</figcaption>
             </figure>
           </div>
         </div>
       </section>
 
       <!-- Secção 6: A leitura dos números -->
-      <section class="mb-5 bg-white p-4 rounded shadow-sm">
-        <h2 class="h4 mb-3 text-primary">6. A leitura dos números</h2>
+      <section class="card card-section shadow-sm mb-4 p-4 bg-white">
+        <h3 class="h5 text-success fw-bold mb-3 border-bottom pb-2">6. A leitura dos números</h3>
         
         <p><strong>Os bytes:</strong> A versão em Bootstrap baixou cerca de 5,3 vezes mais CSS do que a versão autoral (36,6 kB contra 6,9 kB). Sem contar a folha do Google Fonts no autoral (5,2 kB contra 36,6 kB), o Bootstrap exige mais de 7 vezes mais volume de folhas de estilo. No entanto, o total transferido da página (barra de resumo) não reflete isoladamente isso, pois é dominado por elementos idênticos nas duas versões, como as fotografias dos produtos (385 kB), além do facto de o autoral carregar uma fonte externa (woff2 de 37,8 kB).</p>
 
@@ -230,25 +266,26 @@
       </section>
 
       <!-- Secção 7: Links de Referência e Documentação -->
-      <section class="mb-4 bg-white p-4 rounded shadow-sm">
-        <h2 class="h5 text-primary mb-3">7. Links de Referência e Documentação Oficial</h2>
-        <ul>
-          <li><strong>Documentação Oficial do Bootstrap 5.3:</strong> <a href="https://getbootstrap.com/docs/5.3/" target="_blank">https://getbootstrap.com/docs/5.3/</a></li>
-          <li><strong>Repositório Oficial do Bootstrap (GitHub):</strong> <a href="https://github.com/twbs/bootstrap" target="_blank">https://github.com/twbs/bootstrap</a></li>
-          <li><strong>Rede de Distribuição de Conteúdo (jsDelivr CDN):</strong> <a href="https://www.jsdelivr.com/package/npm/bootstrap" target="_blank">https://www.jsdelivr.com/package/npm/bootstrap</a></li>
-          <li><strong>Validador de Marcação W3C Nu:</strong> <a href="https://validator.w3.org/nu/" target="_blank">https://validator.w3.org/nu/</a></li>
+      <section class="card card-section shadow-sm mb-4 p-4 bg-white">
+        <h3 class="h5 text-success fw-bold mb-3 border-bottom pb-2">7. Links de Referência e Documentação Oficial</h3>
+        <ul class="list-unstyled">
+          <li class="mb-2">🔗 <strong>Documentação Oficial do Bootstrap 5.3:</strong> <a href="https://getbootstrap.com/docs/5.3/" target="_blank" class="text-decoration-none">getbootstrap.com/docs/5.3/</a></li>
+          <li class="mb-2">🔗 <strong>Repositório Oficial do Bootstrap (GitHub):</strong> <a href="https://github.com/twbs/bootstrap" target="_blank" class="text-decoration-none">github.com/twbs/bootstrap</a></li>
+          <li class="mb-2">🔗 <strong>Rede de Distribuição de Conteúdo (jsDelivr CDN):</strong> <a href="https://www.jsdelivr.com/package/npm/bootstrap" target="_blank" class="text-decoration-none">jsdelivr.com/package/npm/bootstrap</a></li>
+          <li class="mb-2">🔗 <strong>Validador de Marcação W3C Nu:</strong> <a href="https://validator.w3.org/nu/" target="_blank" class="text-decoration-none">validator.w3.org/nu/</a></li>
         </ul>
       </section>
 
       <!-- Secção 8: Conclusão -->
-      <section class="mb-5 bg-white p-4 rounded shadow-sm">
-        <h2 class="h4 mb-3 text-primary">8. Conclusão</h2>
-        <p>A AgroFeira deveria usar o Bootstrap num cenário de prototipagem rápida de interfaces padronizadas, devido aos 40 kB de CSS próprio e componentes prontos; porém, não deveria adotá-lo num sistema final de identidade visual altamente específica, pois o volume de classes no HTML e a dependência de customização de variáveis tornam a manutenção menos controlável que os 340 kB de CSS autoral estruturado.</p>
+      <section class="card card-section shadow-sm mb-5 p-4 bg-white border-start border-success border-4">
+        <h3 class="h5 text-success fw-bold mb-3">8. Conclusão</h3>
+        <p class="mb-0">A AgroFeira deveria usar o Bootstrap num cenário de prototipagem rápida de interfaces padronizadas, devido aos 40 kB de CSS próprio e componentes prontos; porém, não deveria adotá-lo num sistema final de identidade visual altamente específica, pois o volume de classes no HTML e a dependência de customização de variáveis tornam a manutenção menos controlável que os 340 kB de CSS autoral estruturado.</p>
       </section>
 
-      <footer class="text-center text-muted">
-        <p>Relatório gerado automaticamente para a Atividade 5 — Laboratório de Produção de Software (UFRA Paragominas) | Aluno: Alex da Silva Oliveira.</p>
+      <footer class="text-center text-muted py-3 border-top">
+        <p class="mb-0 small">Relatório gerado automaticamente para a Atividade 5 — Laboratório de Produção de Software (UFRA Paragominas) | Discente: Alex da Silva Oliveira.</p>
       </footer>
+
     </div>
   </body>
 </html>
