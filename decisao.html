@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex da Silva Oliveira — Registro de Decisão</title>
+  <link rel="stylesheet" href="camadas.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="componentes.css">
+  <link rel="stylesheet" href="utilitarios.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="pular-conteudo">Pular para o conteúdo principal</a>
+
+  <header class="cabecalho-principal">
+    <div class="grade-alinhamento cabecalho-conteudo">
+      <h1 class="logo-texto"><a href="index.html">AgroFeira</a></h1>
+      <nav aria-label="Menu principal">
+        <ul class="lista-navegacao">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="safra.html">Safra</a></li>
+          <li><a href="cadastro-produtor.html">Cadastro</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="grade-alinhamento secao-espacada">
+    <h2>Aula 6 — O registro de decisão</h2>
+
+    <p><strong>Aluno:</strong> Alex da Silva Oliveira | <strong>Matrícula:</strong> 20240012345</p>
+    <p><strong>Repositório:</strong> <a href="https://github.com/derykalex/agrofeira-derykalex">https://github.com/derykalex/agrofeira-derykalex</a></p>
+    <ul>
+      <li><strong>Site Autoral:</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/">https://derykalex.github.io/agrofeira-derykalex/</a></li>
+      <li><strong>Catálogo Bootstrap:</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/catalogo-bootstrap.html">https://derykalex.github.io/agrofeira-derykalex/catalogo-bootstrap.html</a></li>
+      <li><strong>Checkout Bootstrap:</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/checkout-bootstrap.html">https://derykalex.github.io/agrofeira-derykalex/checkout-bootstrap.html</a></li>
+    </ul>
+
+    <h3>1. As correções de acessibilidade</h3>
+    <table class="tabela-safra">
+      <caption>Registro de correções de acessibilidade aplicadas sobre a documentação padrão</caption>
+      <thead>
+        <tr>
+          <th scope="col">Componente</th>
+          <th scope="col">Problema</th>
+          <th scope="col">Como se detectou</th>
+          <th scope="col">Correção</th>
+          <th scope="col">Onde está no código</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Botão de navegação (Toggler)</th>
+          <td>Nome acessível em inglês ("Toggle navigation") na documentação padrão.</td>
+          <td>Painel Accessibility do DevTools exibindo Name: "Toggle navigation".</td>
+          <td>Atributo traduzido para <code>aria-label="Menu"</code>.</td>
+          <td>No <code>button.navbar-toggler</code> dentro de <code>header nav</code> em <code>catalogo-bootstrap.html</code>.</td>
+        </tr>
+        <tr>
+          <th scope="row">Botão de fechar modal (btn-close)</th>
+          <td>Nome acessível em inglês ("Close").</td>
+          <td>Painel Accessibility exibindo Name: "Close".</td>
+          <td>Atributo ajustado para <code>aria-label="Fechar"</code>.</td>
+          <td>No <code>button.btn-close</code> em <code>.modal-header</code> do modal <code>#detalhe-acai</code>.</td>
+        </tr>
+        <tr>
+          <th scope="row">Título do diálogo modal</th>
+          <td>Uso de <code>&lt;h1&gt;</code> na documentação, gerando múltiplos H1s na página.</td>
+          <td>Auditoria estrutural de landmarks e validação hierárquica.</td>
+          <td>Ajustado para <code>&lt;h2 class="modal-title h5"&gt;</code> preservando tamanho e semântica.</td>
+          <td>No <code>h2#detalhe-acai-titulo</code> dentro de <code>.modal-header</code>.</td>
+        </tr>
+        <tr>
+          <th scope="row">Papel ARIA no container do Modal</th>
+          <td>Validador W3C acusa erro em <code>aria-labelledby</code> num <code>&lt;div&gt;</code> sem role antes do script rodar.</td>
+          <td>Validador HTML do W3C (Nu Html Checker).</td>
+          <td>Adicionado explicitamente <code>role="dialog"</code> na marcação estática.</td>
+          <td>No container <code>div#detalhe-acai.modal</code> em <code>catalogo-bootstrap.html</code>.</td>
+        </tr>
+        <tr>
+          <th scope="row">Mensagens de validação de formulário</th>
+          <td>Mensagens de erro não associadas programaticamente ao leitor de tela (apenas cor visual).</td>
+          <td>Painel Accessibility mostrando <code>Description: ""</code> nos inputs do formulário.</td>
+          <td>Adicionado <code>aria-describedby</code> nos inputs apontando para o id da <code>.invalid-feedback</code>.</td>
+          <td>Nos campos <code>#nome</code>, <code>#email</code> e <code>#termos</code> em <code>checkout-bootstrap.html</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Pendências declaradas (o que a marcação pura não resolve):</strong></p>
+    <ul>
+      <li><strong>Foco automático no primeiro erro de validação:</strong> Com o uso de <code>novalidate</code> e do script padrão do Bootstrap, o foco do teclado permanece no botão de submissão ("Fazer pedido") em caso de falha, exigindo script personalizado para redirecionar o foco ao primeiro campo inválido.</li>
+      <li><strong>Modal dinâmico por produto:</strong> Apenas o açaí possui diálogo estruturado na marcação estática; exibir os detalhes dinamicamente para os demais 6 produtos sem duplicar marcação exigirá integração via JavaScript ou renderização por componentes no Bloco 2.</li>
+    </ul>
+
+    <h3>2. O registro de decisão</h3>
+
+    <h4>Contexto</h4>
+    <p>A AgroFeira necessita de uma estratégia de estilização sustentável para a transição do catálogo estático para uma aplicação dinâmica em React no Bloco 2. Na Atividade 5, a folha autoral entregou apenas 2,1 kB de CSS e LCP de 41 ms (39,4 kB transferidos totais), enquanto o Bootstrap exigiu 33,4 kB transferidos de CSS (232 kB descomprimidos) e LCP de 98 ms (108 kB totais). Na Aula 6, a introdução do script do Bootstrap adicionou mais 25,2 kB transferidos (80,5 kB descompactados), e a desativação do JavaScript causou a quebra total da navegação mobile e da validação no checkout, onde o formulário submeteu dados vazios sem restrição.</p>
+
+    <h4>Opções consideradas</h4>
+    <ul>
+      <li><strong>Folha autoral (CSS Moderno com @layer e Tokens):</strong> Ganha controle total de bytes, zero dependência externa e resiliência com JS desativado; cobra maior esforço manual para construir comportamentos interativos complexos acessíveis.</li>
+      <li><strong>Bootstrap 5.3:</strong> Ganha prototipação acelerada de componentes comuns (navbar, modal); cobra 312,5 kB de recursos descompactados (CSS + JS) e conflita conceitualmente com a manipulação do DOM virtual pelo React.</li>
+      <li><strong>Tailwind CSS (Utility-First):</strong> Conforme os slides da Aula 6 ("Outra abordagem: utilitários", p. 106), elimina CSS não utilizado na compilação final e evita nomes de classes arbitrários, mas exige utilitários extensos no JSX e compilação em build time.</li>
+    </ul>
+
+    <h4>Decisão</h4>
+    <p>Decidimos adotar a <strong>Folha Autoral com CSS Moderno e Design Tokens</strong> para as próximas fases do projeto, integrando utilitários modulares apenas onde estritamente necessário.</p>
+
+    <h4>Consequências aceitas</h4>
+    <ul>
+      <li>Necessidade de implementar e testar manualmente comportamentos interativos acessíveis (como armadilhas de foco em modais e menus colapsáveis) quando integrados ao ecossistema de componentes do React.</li>
+      <li>Tempo adicional de desenvolvimento na criação de novos padrões de tela (como tabelas administrativas responsivas), dispensando o ganho de velocidade imediato das classes prontas do Bootstrap.</li>
+    </ul>
+
+    <h4>O que me faria mudar de ideia</h4>
+    <p>A expansão imediata do escopo da AgroFeira para um painel administrativo denso com dezenas de formulários e dashboards complexos, ou a constatação de que a equipe não consegue manter a consistência dos tokens de acessibilidade sem o rigor padronizado de um framework consolidado.</p>
+
+    <h4>Fontes</h4>
+    <ul>
+      <li>BOOTSTRAP. <em>Getting started: Accessibility</em>. Documentação oficial do Bootstrap v5.3. Disponível em: &lt;https://getbootstrap.com/docs/5.3/getting-started/accessibility/&gt;. Acesso em: 24 out. 2026.</li>
+      <li>GRANT, Keith J. <em>CSS in Depth</em>. Shelter Island: Manning Publications, 2018. Capítulo 9: "Modular CSS and Component Architecture".</li>
+    </ul>
+  </main>
+
+  <footer class="rodape-principal">
+    <div class="grade-alinhamento rodape-conteudo">
+      <p>AgroFeira Paragominas — Da roça para a mesa. Produtos frescos da agricultura familiar.</p>
+    </div>
+  </footer>
+</body>
+</html>
