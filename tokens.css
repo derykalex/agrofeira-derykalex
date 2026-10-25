@@ -1,40 +1,44 @@
-@layer base {
-  :root {
-    --cor-fundo: #f4f0f8;
-    --cor-texto: #2d2335;
-    --cor-texto-suave: #6b5b7b;
-    --cor-borda: #dcd0e8;
-    --cor-marca: #5b2a86;
-    --cor-marca-forte: #3f1b61;
-    --cor-sobre-marca: #ffffff;
-    --cor-foco: #1d4ed8;
+:root {
+  /* Tipografia */
+  --fonte-texto: 'Lora', serif;
+  --fonte-titulo: 'Poppins', sans-serif;
 
-    /* Trios RGB para o Bootstrap (tema claro) */
-    --cor-marca-rgb: 91, 42, 134;
-    --cor-marca-forte-rgb: 63, 27, 97;
+  /* Espaçamento e Geometria */
+  --raio: 12px;
+  --espaco-1: 0.25rem;
+  --espaco-2: 0.5rem;
+  --espaco-3: 1rem;
+  --espaco-4: 1.5rem;
 
-    --fonte-texto: system-ui, sans-serif;
-    --fonte-titulo: "Lora", serif;
-    --tamanho-texto: 1rem;
-    --tamanho-h3: 1.25rem;
-    --tamanho-h2: 1.563rem;
-    --raio: 0.5rem;
+  /* Paleta Verde / AgroFeira */
+  --cor-marca: #2e6b30;
+  --cor-marca-escura: #1f4a21;
+  --cor-sobre-marca: #ffffff;
+  --cor-realce: #e6a100;
+
+  /* Tema Claro (Predefinido) */
+  --cor-fundo: #fbf8f2;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1a2e1b;
+  --cor-texto-suave: #4a5d4c;
+  --cor-borda: #dcd6cd;
+}
+
+/* Modo Escuro automático (sistema) ou ativado por classe */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) {
+    --cor-fundo: #121513;
+    --cor-superficie: #1c221e;
+    --cor-texto: #e8eee9;
+    --cor-texto-suave: #9cb09e;
+    --cor-borda: #2d3830;
   }
+}
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --cor-fundo: #1a1520;
-      --cor-texto: #e2d9ec;
-      --cor-texto-suave: #b3a4c4;
-      --cor-borda: #3b2e4d;
-      --cor-marca: #7c3aed;
-      --cor-marca-forte: #9333ea;
-      --cor-sobre-marca: #ffffff;
-      --cor-foco: #3b82f6;
-
-      /* Trios RGB para o Bootstrap (tema escuro) */
-      --cor-marca-rgb: 124, 58, 237;
-      --cor-marca-forte-rgb: 147, 51, 234;
-    }
-  }
+:root[data-tema="escuro"] {
+  --cor-fundo: #121513;
+  --cor-superficie: #1c221e;
+  --cor-texto: #e8eee9;
+  --cor-texto-suave: #9cb09e;
+  --cor-borda: #2d3830;
 }

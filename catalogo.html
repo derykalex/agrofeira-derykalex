@@ -1,66 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AgroFeira - catálogo</title>
+  <title>AgroFeira — Catálogo</title>
   <link rel="stylesheet" href="camadas.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="componentes.css">
   <link rel="stylesheet" href="utilitarios.css">
+  <script defer src="tema.js"></script>
 </head>
-<body class="pagina-catalogo">
-  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<body>
+  <a href="#conteudo" class="link-pular">Pular para o conteúdo</a>
 
-  <header class="cabecalho-site">
-    <h1>AgroFeira</h1>
+  <header class="cabecalho-principal">
+    <div class="container container-flex">
+      <a href="index.html" class="logo">AgroFeira</a>
+      <div class="menu-navegacao">
+        <nav aria-label="Navegação principal">
+          <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+            <li><a href="safra.html">Safra</a></li>
+            <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="btn-tema" id="btn-alterna-tema" aria-label="Alternar modo claro e escuro">
+          🌓 <span id="txt-tema">Tema</span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <nav aria-label="Principal">
-    <ul class="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
-      <li><a href="safra.html">Safra</a></li>
-      <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-    </ul>
-  </nav>
+  <main id="conteudo" class="container">
+    <h1>Produtos da semana</h1>
+    <p class="subtitulo">Colhido nos sítios da região e vendido direto, sem atravessador.</p>
 
-  <main id="conteudo">
-    <h2>Produtos da semana</h2>
-    <p>Colhido nos sítios da região e vendido direto, sem atravessador.</p>
+    <div class="grade-produtos">
+      <article class="cartao-produto">
+        <img src="acai.jpg" width="640" height="480" alt="Tigela de açaí batido, com duas colheres de plástico">
+        <div class="cartao-conteudo">
+          <h2>Açaí médio</h2>
+          <p class="produtor">Sítio Boa Vista, Colônia do Uraim</p>
+          <p class="preco">R$ 12,00 o litro</p>
+          <button type="button" class="btn-primario">Adicionar</button>
+        </div>
+      </article>
 
-    <ul class="lista-produtos">
-      <li class="cartao-produto destaque">
-        <article>
-          <img src="cacau.jpg" alt="Cacau em amêndoa" width="640" height="480">
-          <h3>Cacau em amêndoa</h3>
+      <article class="cartao-produto">
+        <img src="farinha.jpg" width="640" height="480" alt="Pote com farinha d'água torrada">
+        <div class="cartao-conteudo">
+          <h2>Farinha d'água</h2>
+          <p class="produtor">Casa de Farinha São José, Nova Vida</p>
+          <p class="preco">R$ 90,00 a lata</p>
+          <button type="button" class="btn-primario">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="cartao-produto">
+        <img src="banana.jpg" width="640" height="480" alt="Pencas de banana-prata madura em banca de feira">
+        <div class="cartao-conteudo">
+          <h2>Banana-prata</h2>
+          <p class="produtor">Sítio Três Irmãos, Colônia do Uraim</p>
+          <p class="preco">R$ 8,00 a dúzia</p>
+          <button type="button" class="btn-primario">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="cartao-produto">
+        <img src="cupuacu-640.jpg" width="640" height="480" alt="Polpa de cupuaçu fresca em tigela">
+        <div class="cartao-conteudo">
+          <h2>Polpa de cupuaçu</h2>
+          <p class="produtor">Chácara Macaúba, PA-125</p>
+          <p class="preco">R$ 18,00 o kg</p>
+          <button type="button" class="btn-primario">Adicionar</button>
+        </div>
+      </article>
+
+      <article class="cartao-produto">
+        <img src="cacau.jpg" width="640" height="480" alt="Amêndoas secas de cacau da Amazônia">
+        <div class="cartao-conteudo">
+          <h2>Cacau em amêndoas</h2>
           <p class="produtor">Sítio Cacau do Capim</p>
           <p class="preco">R$ 25,00 o quilo</p>
-          <button type="button">Adicionar</button>
-        </article>
-      </li>
-      <li class="cartao-produto">
-        <article>
-          <img src="acai.jpg" alt="Açaí médio" width="640" height="480">
-          <h3>Açaí médio</h3>
-          <p class="produtor">Sítio Boa Vista</p>
-          <p class="preco">R$ 12,00 o litro</p>
-          <button type="button">Adicionar</button>
-        </article>
-      </li>
-    </ul>
+          <button type="button" class="btn-primario">Adicionar</button>
+        </div>
+      </article>
+    </div>
   </main>
 
-  <aside>
-    <h2>Onde e quando</h2>
-    <p>Praça central de Paragominas, toda sexta, das 6h às 11h.</p>
-  </aside>
-
-  <footer class="rodape-site">
-    <p>AgroFeira — da roça para a mesa, em Paragominas.</p>
+  <footer class="rodape">
+    <div class="container">
+      <p>AgroFeira — Da roça para a mesa, em Paragominas.</p>
+    </div>
   </footer>
 </body>
 </html>
