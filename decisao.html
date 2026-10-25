@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="camadas.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="base.css">
@@ -15,27 +15,27 @@
   <link rel="stylesheet" href="utilitarios.css">
 </head>
 <body>
-  <a href="#conteudo-principal" class="pular-conteudo">Pular para o conteúdo principal</a>
+  <a href="#conteudo" class="link-pular">Pular para o conteúdo</a>
 
   <header class="cabecalho-principal">
-    <div class="grade-alinhamento cabecalho-conteudo">
-      <h1 class="logo-texto"><a href="index.html">AgroFeira</a></h1>
-      <nav aria-label="Menu principal">
-        <ul class="lista-navegacao">
+    <div class="container container-flex">
+      <a href="index.html" class="logo">AgroFeira</a>
+      <nav aria-label="Navegação principal">
+        <ul class="menu">
           <li><a href="index.html">Início</a></li>
           <li><a href="catalogo.html">Catálogo</a></li>
           <li><a href="safra.html">Safra</a></li>
-          <li><a href="cadastro-produtor.html">Cadastro</a></li>
+          <li><a href="cadastro-produtor.html">Cadastro de produtor</a></li>
           <li><a href="sobre.html">Sobre</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="conteudo-principal" class="grade-alinhamento secao-espacada">
+  <main id="conteudo" class="container py-4">
     <h2>Aula 6 — O registro de decisão</h2>
 
-    <p><strong>Aluno:</strong> Alex da Silva Oliveira | <strong>Matrícula:</strong> 20240012345</p>
+    <p><strong>Nome completo:</strong> Alex da Silva Oliveira | <strong>Matrícula:</strong> 20230104821</p>
     <p><strong>Repositório:</strong> <a href="https://github.com/derykalex/agrofeira-derykalex">https://github.com/derykalex/agrofeira-derykalex</a></p>
     <ul>
       <li><strong>Site Autoral:</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/">https://derykalex.github.io/agrofeira-derykalex/</a></li>
@@ -44,8 +44,9 @@
     </ul>
 
     <h3>1. As correções de acessibilidade</h3>
+
     <table class="tabela-safra">
-      <caption>Registro de correções de acessibilidade aplicadas sobre a documentação padrão</caption>
+      <caption>Registro de correções de acessibilidade aplicadas sobre componentes do framework</caption>
       <thead>
         <tr>
           <th scope="col">Componente</th>
@@ -57,83 +58,80 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">Botão de navegação (Toggler)</th>
-          <td>Nome acessível em inglês ("Toggle navigation") na documentação padrão.</td>
-          <td>Painel Accessibility do DevTools exibindo Name: "Toggle navigation".</td>
-          <td>Atributo traduzido para <code>aria-label="Menu"</code>.</td>
-          <td>No <code>button.navbar-toggler</code> dentro de <code>header nav</code> em <code>catalogo-bootstrap.html</code>.</td>
+          <th scope="row">Botão do menu (navbar)</th>
+          <td>Rótulo acessível em inglês ("Toggle navigation") padrão da documentação</td>
+          <td>Painel Accessibility: Name "Toggle navigation"</td>
+          <td>Substituição de aria-label para "Menu" em português</td>
+          <td>No button.navbar-toggler do header em catalogo-bootstrap.html</td>
         </tr>
         <tr>
-          <th scope="row">Botão de fechar modal (btn-close)</th>
-          <td>Nome acessível em inglês ("Close").</td>
-          <td>Painel Accessibility exibindo Name: "Close".</td>
-          <td>Atributo ajustado para <code>aria-label="Fechar"</code>.</td>
-          <td>No <code>button.btn-close</code> em <code>.modal-header</code> do modal <code>#detalhe-acai</code>.</td>
+          <th scope="row">Botão de fechar (modal)</th>
+          <td>Rótulo acessível em inglês ("Close") padrão do componente</td>
+          <td>Painel Accessibility: Name "Close"</td>
+          <td>Substituição de aria-label para "Fechar" em português</td>
+          <td>No button.btn-close dentro de .modal-header em catalogo-bootstrap.html</td>
+        </tr>
+        <tr>
+          <th scope="row">Estrutura do diálogo modal</th>
+          <td>Atributo aria-labelledby associado a elemento div sem papel semântico definido nativamente</td>
+          <td>Erro acusado pelo validador W3C ao analisar o HTML estático</td>
+          <td>Inclusão explícita de role="dialog" diretamente na marcação estática</td>
+          <td>No div#detalhe-acai.modal em catalogo-bootstrap.html</td>
         </tr>
         <tr>
           <th scope="row">Título do diálogo modal</th>
-          <td>Uso de <code>&lt;h1&gt;</code> na documentação, gerando múltiplos H1s na página.</td>
-          <td>Auditoria estrutural de landmarks e validação hierárquica.</td>
-          <td>Ajustado para <code>&lt;h2 class="modal-title h5"&gt;</code> preservando tamanho e semântica.</td>
-          <td>No <code>h2#detalhe-acai-titulo</code> dentro de <code>.modal-header</code>.</td>
+          <td>Uso de h1 no modal quebrando a linearidade semântica da página já dotada de h1</td>
+          <td>Inspeção estrutural da árvore de títulos e regra do validador W3C</td>
+          <td>Alteração para h2 acompanhado da classe modal-title h5</td>
+          <td>No h2#detalhe-acai-titulo dentro de .modal-header em catalogo-bootstrap.html</td>
         </tr>
         <tr>
-          <th scope="row">Papel ARIA no container do Modal</th>
-          <td>Validador W3C acusa erro em <code>aria-labelledby</code> num <code>&lt;div&gt;</code> sem role antes do script rodar.</td>
-          <td>Validador HTML do W3C (Nu Html Checker).</td>
-          <td>Adicionado explicitamente <code>role="dialog"</code> na marcação estática.</td>
-          <td>No container <code>div#detalhe-acai.modal</code> em <code>catalogo-bootstrap.html</code>.</td>
-        </tr>
-        <tr>
-          <th scope="row">Mensagens de validação de formulário</th>
-          <td>Mensagens de erro não associadas programaticamente ao leitor de tela (apenas cor visual).</td>
-          <td>Painel Accessibility mostrando <code>Description: ""</code> nos inputs do formulário.</td>
-          <td>Adicionado <code>aria-describedby</code> nos inputs apontando para o id da <code>.invalid-feedback</code>.</td>
-          <td>Nos campos <code>#nome</code>, <code>#email</code> e <code>#termos</code> em <code>checkout-bootstrap.html</code>.</td>
+          <th scope="row">Mensagens de erro do formulário</th>
+          <td>Mensagens de erro desacopladas programaticamente dos campos para leitores de tela</td>
+          <td>Inspeção da árvore ARIA na aba Accessibility: ausência de Description associada</td>
+          <td>Adição de id único em .invalid-feedback e amarração via aria-describedby no input</td>
+          <td>Nos campos nome, email e termos em checkout-bootstrap.html</td>
         </tr>
       </tbody>
     </table>
 
-    <p><strong>Pendências declaradas (o que a marcação pura não resolve):</strong></p>
+    <p><strong>Pendências declaradas:</strong></p>
     <ul>
-      <li><strong>Foco automático no primeiro erro de validação:</strong> Com o uso de <code>novalidate</code> e do script padrão do Bootstrap, o foco do teclado permanece no botão de submissão ("Fazer pedido") em caso de falha, exigindo script personalizado para redirecionar o foco ao primeiro campo inválido.</li>
-      <li><strong>Modal dinâmico por produto:</strong> Apenas o açaí possui diálogo estruturado na marcação estática; exibir os detalhes dinamicamente para os demais 6 produtos sem duplicar marcação exigirá integração via JavaScript ou renderização por componentes no Bloco 2.</li>
+      <li><strong>Gerenciamento dinâmico de foco na validação:</strong> Ao acionar o envio com campos inválidos, o foco do teclado permanece no botão de submissão em vez de ser transferido programaticamente para o primeiro campo irregular, exigindo script customizado de foco além do padrão fornecido pela documentação.</li>
+      <li><strong>Instanciação dinâmica de dados no diálogo:</strong> O modal implementado atende unicamente ao produto Açaí médio de forma estática; a troca de contexto e abastecimento reativo para os demais produtos do catálogo depende de lógica scriptada que ainda não compõe a camada estática.</li>
     </ul>
 
     <h3>2. O registro de decisão</h3>
 
     <h4>Contexto</h4>
-    <p>A AgroFeira necessita de uma estratégia de estilização sustentável para a transição do catálogo estático para uma aplicação dinâmica em React no Bloco 2. Na Atividade 5, a folha autoral entregou apenas 2,1 kB de CSS e LCP de 41 ms (39,4 kB transferidos totais), enquanto o Bootstrap exigiu 33,4 kB transferidos de CSS (232 kB descomprimidos) e LCP de 98 ms (108 kB totais). Na Aula 6, a introdução do script do Bootstrap adicionou mais 25,2 kB transferidos (80,5 kB descompactados), e a desativação do JavaScript causou a quebra total da navegação mobile e da validação no checkout, onde o formulário submeteu dados vazios sem restrição.</p>
+    <p>A AgroFeira necessita de uma definição sustentável de arquitetura de estilização para a transição do Bloco 1 rumo à aplicação integrada em React. O comparativo da Atividade 5 demonstrou que a folha autoral atinge LCP de 420 ms consumindo 1,4 kB transferidos (5,8 kB descomprimidos), enquanto o Bootstrap exige 33,4 kB transferidos (232 kB de CSS), aos quais somam-se agora 25,2 kB transferidos (80,5 kB em disco) de runtime JavaScript. Nos testes de degradação sem script (Passo 10), o menu colapsável em 360 px e o modal de detalhes tornam-se inoperantes, enquanto o formulário com novalidate perde totalmente a barreira de submissão vazia.</p>
 
     <h4>Opções consideradas</h4>
     <ul>
-      <li><strong>Folha autoral (CSS Moderno com @layer e Tokens):</strong> Ganha controle total de bytes, zero dependência externa e resiliência com JS desativado; cobra maior esforço manual para construir comportamentos interativos complexos acessíveis.</li>
-      <li><strong>Bootstrap 5.3:</strong> Ganha prototipação acelerada de componentes comuns (navbar, modal); cobra 312,5 kB de recursos descompactados (CSS + JS) e conflita conceitualmente com a manipulação do DOM virtual pelo React.</li>
-      <li><strong>Tailwind CSS (Utility-First):</strong> Conforme os slides da Aula 6 ("Outra abordagem: utilitários", p. 106), elimina CSS não utilizado na compilação final e evita nomes de classes arbitrários, mas exige utilitários extensos no JSX e compilação em build time.</li>
+      <li><strong>Folha autoral (CSS Moderno e Camadas):</strong> Entrega máxima performance (1,4 kB transferidos de CSS, zero dependência de script para layout e LCP de 420 ms), porém cobra maior esforço manual de escrita para componentes complexos e estados.</li>
+      <li><strong>Bootstrap 5.3.8:</strong> Oferece aceleração imediata com grid e componentes consolidados, mas cobra um custo elevado de payload (33,4 kB de CSS + 25,2 kB de script transferidos) e acarreta riscos de concorrência com o Virtual DOM do React ao manipular classes e atributos imperativamente.</li>
+      <li><strong>Tailwind CSS:</strong> Abordagem utility-first que padroniza o design diretamente no markup sem inflar o CSS final em produção (via Purge/JIT), embora na fase Play CDN dependa de compilação em tempo de execução via script proprietário (Play CDN browser 4.x) e gere marcação extensa.</li>
     </ul>
 
     <h4>Decisão</h4>
-    <p>Decidimos adotar a <strong>Folha Autoral com CSS Moderno e Design Tokens</strong> para as próximas fases do projeto, integrando utilitários modulares apenas onde estritamente necessário.</p>
+    <p>Adotar a <strong>Folha Autoral com Design Tokens</strong> para a estilização principal da aplicação, integrando componentes utilitários orientados pelo nosso tokens.css e descartando a biblioteca de JavaScript imperativo do Bootstrap na futura arquitetura React.</p>
 
     <h4>Consequências aceitas</h4>
-    <ul>
-      <li>Necessidade de implementar e testar manualmente comportamentos interativos acessíveis (como armadilhas de foco em modais e menus colapsáveis) quando integrados ao ecossistema de componentes do React.</li>
-      <li>Tempo adicional de desenvolvimento na criação de novos padrões de tela (como tabelas administrativas responsivas), dispensando o ganho de velocidade imediato das classes prontas do Bootstrap.</li>
-    </ul>
+    <p>Ao dispensar o runtime de 80,5 kB do script do framework, aceita-se o custo de engenharia de implementar manualmente a acessibilidade de diálogos e menus colapsáveis através de primitivas declarativas do React (gerenciando foco, aria-expanded e teclas de escape nativamente). Assume-se também a responsabilidade pela criação e manutenção de classes utilitárias e componentes na folha proprietária, garantindo em contrapartida imunidade contra bloqueios de rede CDN e tempo de carregamento ultrarrápido em redes móveis.</p>
 
     <h4>O que me faria mudar de ideia</h4>
-    <p>A expansão imediata do escopo da AgroFeira para um painel administrativo denso com dezenas de formulários e dashboards complexos, ou a constatação de que a equipe não consegue manter a consistência dos tokens de acessibilidade sem o rigor padronizado de um framework consolidado.</p>
+    <p>Caso a complexidade de telas administrativas (como painéis gerenciais e tabelas com paginação) amplie o tempo de entrega a ponto de inviabilizar os prazos, ou se métricas de Core Web Vitals sob emulação 3G demonstrarem que o Tailwind compilado via pipeline de build gera um pacote final de CSS inferior a 10 kB com menor tempo de desenvolvimento, a migração para Tailwind CSS será realizada.</p>
 
     <h4>Fontes</h4>
     <ul>
-      <li>BOOTSTRAP. <em>Getting started: Accessibility</em>. Documentação oficial do Bootstrap v5.3. Disponível em: &lt;https://getbootstrap.com/docs/5.3/getting-started/accessibility/&gt;. Acesso em: 24 out. 2026.</li>
-      <li>GRANT, Keith J. <em>CSS in Depth</em>. Shelter Island: Manning Publications, 2018. Capítulo 9: "Modular CSS and Component Architecture".</li>
+      <li>BOOTSTRAP. <em>JavaScript · Bootstrap v5.3</em>. Seção "Data attributes" e "Disabled JavaScript". Disponível na documentação oficial: getbootstrap.com/docs/5.3/getting-started/javascript/.</li>
+      <li>GRANT, Keith J. <em>CSS in Depth</em>. Manning Publications, 2018. Capítulo 1: "Reviewing the cascade" e Capítulo 2: "Working with relative units".</li>
     </ul>
   </main>
 
-  <footer class="rodape-principal">
-    <div class="grade-alinhamento rodape-conteudo">
-      <p>AgroFeira Paragominas — Da roça para a mesa. Produtos frescos da agricultura familiar.</p>
+  <footer class="rodape">
+    <div class="container">
+      <p>AgroFeira — Produtos agroecológicos de Paragominas e região.</p>
     </div>
   </footer>
 </body>

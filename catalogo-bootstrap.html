@@ -40,112 +40,140 @@
         <h1 class="h2 mb-3">Produtos da semana</h1>
         <p class="text-body-secondary mb-4">O que chegou das colônias de Paragominas nesta semana.</p>
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+          <!-- 1. Açaí médio -->
           <div class="col">
             <article class="card h-100">
-              <img src="acai.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Tigela de açaí batido, com duas colheres de plástico">
-              <div class="card-body">
-                <span class="badge text-bg-success mb-2">Safra nova</span>
+              <img src="acai.jpg" class="card-img-top" width="640" height="480" alt="Tigela de açaí batido, com duas colheres de plástico">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-success align-self-start mb-2">Safra nova</span>
                 <h2 class="card-title h5">Açaí médio</h2>
-                <p class="card-text text-body-secondary">Sítio Boa Vista, Colônia do Uraim</p>
-                <p class="card-text fw-bold">R$ 12,00 o litro</p>
-                <button type="button" class="btn btn-primary">Adicionar</button>
-                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#detalhe-acai">Ver detalhes</button>
+                <p class="card-text text-body-secondary mb-1">Sítio Boa Vista, Colônia do Uraim</p>
+                <p class="card-text fw-bold mb-3">R$ 12,00 o litro</p>
+                <div class="mt-auto d-flex gap-2">
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                  <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#detalhe-acai">Ver detalhes</button>
+                </div>
               </div>
             </article>
           </div>
 
+          <!-- 2. Farinha d'água -->
           <div class="col">
             <article class="card h-100">
-              <img src="farinha.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Recipiente com farinha d'água artesanal torrada">
-              <div class="card-body">
+              <img src="farinha.jpg" class="card-img-top" width="640" height="480" alt="Pote com farinha d'água torrada">
+              <div class="card-body d-flex flex-column">
                 <h2 class="card-title h5">Farinha d'água</h2>
-                <p class="card-text text-body-secondary">Casa de Farinha São José, Comunidade Nova Vida</p>
-                <p class="card-text fw-bold">R$ 90,00 a lata</p>
-                <button type="button" class="btn btn-primary">Adicionar</button>
+                <p class="card-text text-body-secondary mb-1">Casa de Farinha São José, Comunidade Nova Vida</p>
+                <p class="card-text fw-bold mb-3">R$ 90,00 a lata</p>
+                <div class="mt-auto">
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
               </div>
             </article>
           </div>
 
+          <!-- 3. Banana-prata -->
           <div class="col">
             <article class="card h-100">
-              <img src="banana.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Pencas de banana-prata maduras na feira">
-              <div class="card-body">
+              <img src="banana.jpg" class="card-img-top" width="640" height="480" alt="Pencas de banana-prata madura em banca de feira">
+              <div class="card-body d-flex flex-column">
                 <h2 class="card-title h5">Banana-prata</h2>
-                <p class="card-text text-body-secondary">Sítio Três Irmãos, Colônia do Uraim</p>
-                <p class="card-text fw-bold">R$ 8,00 a dúzia</p>
-                <button type="button" class="btn btn-primary">Adicionar</button>
+                <p class="card-text text-body-secondary mb-1">Sítio Três Irmãos, Colônia do Uraim</p>
+                <p class="card-text fw-bold mb-3">R$ 8,00 a dúzia</p>
+                <div class="mt-auto">
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
               </div>
             </article>
           </div>
 
+          <!-- 4. Polpa de cupuaçu -->
           <div class="col">
             <article class="card h-100">
-              <img src="pimenta.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Grãos de pimenta-do-reino preta selecionados">
-              <div class="card-body">
-                <span class="badge text-bg-warning mb-2">Estoque baixo</span>
-                <h2 class="card-title h5">Pimenta-do-reino</h2>
-                <p class="card-text text-body-secondary">Chácara Bom Jesus, Rodovia dos Pioneiros</p>
-                <p class="card-text fw-bold">R$ 30,00 o quilo</p>
-                <button type="button" class="btn btn-primary">Adicionar</button>
-              </div>
-            </article>
-          </div>
-
-          <div class="col">
-            <article class="card h-100">
-              <img src="cacau.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Amêndoas de cacau secas e fermentadas">
-              <div class="card-body">
-                <span class="badge text-bg-danger mb-2">Esgotado</span>
-                <h2 class="card-title h5">Cacau em amêndoa</h2>
-                <p class="card-text text-body-secondary">Agrofloresta Uraim, Colônia do Uraim</p>
-                <p class="card-text fw-bold">R$ 25,00 o quilo</p>
-                <button type="button" class="btn btn-primary">Adicionar</button>
-              </div>
-            </article>
-          </div>
-
-          <div class="col">
-            <article class="card h-100">
-              <img src="cupuacu-640.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Polpa de cupuaçu fresca embalada">
-              <div class="card-body">
+              <img src="cupuacu-640.jpg" class="card-img-top" width="640" height="480" alt="Polpa de cupuaçu fresca despolpada em tigela">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-success align-self-start mb-2">Safra nova</span>
                 <h2 class="card-title h5">Polpa de cupuaçu</h2>
-                <p class="card-text text-body-secondary">Sítio Boa Vista, Colônia do Uraim</p>
-                <p class="card-text fw-bold">R$ 22,00 o quilo</p>
-                <button type="button" class="btn btn-primary">Adicionar</button>
+                <p class="card-text text-body-secondary mb-1">Chácara Macaúba, PA-125</p>
+                <p class="card-text fw-bold mb-3">R$ 18,00 o kg</p>
+                <div class="mt-auto">
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
               </div>
             </article>
           </div>
 
+          <!-- 5. Cacau em amêndoas -->
           <div class="col">
             <article class="card h-100">
-              <img src="jambu.jpg" class="card-img-top img-fluid" width="640" height="480" alt="Maço de jambu fresco colhido com flores amarelas">
-              <div class="card-body">
-                <h2 class="card-title h5">Jambu</h2>
-                <p class="card-text text-body-secondary">Horta Comunitária Nova Conquista, Bairro Nova Conquista</p>
-                <p class="card-text fw-bold">R$ 4,00 o maço</p>
-                <button type="button" class="btn btn-primary">Adicionar</button>
+              <img src="cacau.jpg" class="card-img-top" width="640" height="480" alt="Amêndoas secas de cacau da Amazônia">
+              <div class="card-body d-flex flex-column">
+                <h2 class="card-title h5">Cacau em amêndoas</h2>
+                <p class="card-text text-body-secondary mb-1">Agrofloresta Rainha, Rio Uraim</p>
+                <p class="card-text fw-bold mb-3">R$ 25,00 o kg</p>
+                <div class="mt-auto">
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 6. Jambu fresco -->
+          <div class="col">
+            <article class="card h-100">
+              <img src="jambu.jpg" class="card-img-top" width="640" height="480" alt="Maço fresco de jambu paraense com flores amarelas">
+              <div class="card-body d-flex flex-column">
+                <h2 class="card-title h5">Jambu fresco</h2>
+                <p class="card-text text-body-secondary mb-1">Horta Comunitária do Camboatã</p>
+                <p class="card-text fw-bold mb-3">R$ 5,00 o maço</p>
+                <div class="mt-auto">
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 7. Pimenta-de-cheiro -->
+          <div class="col">
+            <article class="card h-100">
+              <img src="pimenta.jpg" class="card-img-top" width="640" height="480" alt="Pimentas-de-cheiro amarelas frescas">
+              <div class="card-body d-flex flex-column">
+                <h2 class="card-title h5">Pimenta-de-cheiro</h2>
+                <p class="card-text text-body-secondary mb-1">Sítio Bom Jesus, Bairro Nagibão</p>
+                <p class="card-text fw-bold mb-3">R$ 6,00 o pacote de 250g</p>
+                <div class="mt-auto">
+                  <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
               </div>
             </article>
           </div>
         </div>
       </main>
 
-      <aside class="col-lg-3">
+      <!-- Painel lateral: Mais pedidos -->
+      <aside class="col-lg-3 mt-4 mt-lg-0" aria-label="Mais pedidos">
         <h2 class="h5 mb-3">Mais pedidos</h2>
-        <ol class="list-group list-group-numbered mb-4">
-          <li class="list-group-item">Açaí médio</li>
-          <li class="list-group-item">Farinha d'água</li>
-          <li class="list-group-item">Polpa de cupuaçu</li>
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">Açaí médio</div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">Farinha d'água</div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">Polpa de cupuaçu</div>
+          </li>
         </ol>
       </aside>
     </div>
 
-    <footer class="pt-4 my-4 text-body-secondary border-top">
-      AgroFeira Paragominas — Da roça para a mesa. Produtos frescos da agricultura familiar.
+    <footer class="mt-5 py-3 border-top text-center text-body-secondary">
+      <p class="mb-0">AgroFeira — Produtos agroecológicos de Paragominas e região.</p>
     </footer>
   </div>
 
+  <!-- Diálogo Modal de Detalhe -->
   <div class="modal fade" id="detalhe-acai" tabindex="-1" role="dialog" aria-labelledby="detalhe-acai-titulo">
     <div class="modal-dialog">
       <div class="modal-content">
