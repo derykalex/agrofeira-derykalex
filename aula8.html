@@ -172,7 +172,7 @@
 
         <section>
             <h3>Experimentos das três formas de JavaScript</h3>
-            <p>O JavaScript pode ser aplicado de três formas distintas: a Forma 1 utilizando um ficheiro externo (<code>js/aula8.js</code>), a Forma 2 inserida de forma interna entre as tags <code>&lt;script&gt;</code> na própria página, e a Forma 3 aplicada diretamente em linha (inline) por meio de atributos em elementos HTML como botões.</p>
+            <p>O JavaScript pode ser aplicado de três formas distintas: a Forma 1 utilizando um ficheiro externo (<code>js/aula8.js</code>), a Forma 2 inserida de forma interna entre as tags <code>&lt;script&gt;</code> na própria página, e a Forma 3 aplicada diretamente em linha (inline) por meio de atributos em elementos HTML como botões[cite: 3, 4].</p>
             
             <!-- Botão da Forma 3 em linha -->
             <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')">Testar Botão (Forma 3)</button>
@@ -184,30 +184,30 @@
 
         <h3>Meus projetos</h3>
         <ul class="lista-conteudo">
-            <li><strong>Tabuleiro (Parte B):</strong> <a href="https://codesandbox.io/p/sandbox/react-dev-forked-2qlpry" target="_blank">https://codesandbox.io/p/sandbox/react-dev-forked-2qlpry</a></li>
-            <li><strong>AgroFeira em componentes (Parte C):</strong> <a href="https://codesandbox.io/p/devbox/react-dev-forked-k9c6ys?workspaceId=ws_R6nWep5r32q31ZufbM26qu" target="_blank">https://codesandbox.io/p/devbox/react-dev-forked-k9c6ys?workspaceId=ws_R6nWep5r32q31ZufbM26qu</a></li>
+            <li><strong>Tabuleiro (Parte B):</strong> <a href="https://codesandbox.io/p/sandbox/react-dev-forked-2qlpry" target="_blank">https://codesandbox.io/p/sandbox/react-dev-forked-2qlpry</a>[cite: 12]</li>
+            <li><strong>AgroFeira em componentes (Parte C):</strong> <a href="https://codesandbox.io/p/devbox/react-dev-forked-k9c6ys?workspaceId=ws_R6nWep5r32q31ZufbM26qu" target="_blank">https://codesandbox.io/p/devbox/react-dev-forked-k9c6ys?workspaceId=ws_R6nWep5r32q31ZufbM26qu</a>[cite: 12]</li>
         </ul>
 
         <h3>Mensagens de erro encontradas</h3>
         <ul class="lista-conteudo">
-            <li><strong>Passo 6 (naoExiste):</strong> <code>Uncaught ReferenceError: naoExiste is not defined at aula8.js:2</code></li>
-            <li><strong>Passo 10 (Elementos vizinhos):</strong> <code>Adjacent JSX elements must be wrapped in an enclosing tag</code></li>
-            <li><strong>Passo 14 (Value declarado duas vezes):</strong> <code>TypeError: Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.js: Identifier 'value' has already been declared. (3:18)'</code></li>
+            <li><strong>Passo 6 (naoExiste):</strong> <code>Uncaught ReferenceError: naoExiste is not defined at aula8.js:2</code>[cite: 4, 12]</li>
+            <li><strong>Passo 10 (Elementos vizinhos):</strong> <code>Adjacent JSX elements must be wrapped in an enclosing tag</code>[cite: 6, 12]</li>
+            <li><strong>Passo 14 (Value declarado duas vezes):</strong> <code>TypeError: Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.js: Identifier 'value' has already been declared. (3:18)'</code>[cite: 7, 12, 18]</li>
         </ul>
 
         <h2>O que eu aprendi</h2>
 
         <h3>1. As três formas de inserção</h3>
-        <p>Para um programa de 200 linhas reutilizado em várias páginas, a escolha ideal seria a Forma 1 (externa, utilizando um ficheiro separado como <code>js/aula8.js</code>). Essa abordagem mantém a organização limpa do código e separa perfeitamente a estrutura HTML da lógica de programação. No desenvolvimento web moderno, assim como fazemos com as folhas de estilo CSS em ficheiros dedicados, o código JavaScript externo facilita a manutenção contínua e evita a poluição do código-fonte das páginas HTML.</p>
+        <p>Para um programa de 200 linhas reutilizado em várias páginas, a escolha ideal seria a Forma 1 (externa, utilizando um ficheiro separado como <code>js/aula8.js</code>). Essa abordagem mantém a organização limpa do código e separa perfeitamente a estrutura HTML da lógica de programação. No desenvolvimento web moderno, assim como fazemos com as folhas de estilo CSS em ficheiros dedicados, o código JavaScript externo facilita a manutenção contínua e evita a poluição do código-fonte das páginas HTML[cite: 3, 12].</p>
 
         <h3>2. Repetição de componentes</h3>
-        <p>No <code>catalogo.html</code> da AgroFeira, os elementos que se repetem diversas vezes são os cartões visuais de produtos (representados pelas tags <code>&lt;article class="produto"&gt;</code>). O componente equivalente em React construído para otimizar essa estrutura seria o componente <code>Produto</code>, e as suas propriedades (props) incluiriam o nome do item, a descrição detalhada e o preço correspondente de cada mercadoria ofertada pelos produtores locais de Paragominas.</p>
+        <p>No <code>catalogo.html</code> da AgroFeira, os elementos que se repetem diversas vezes são os cartões visuais de produtos (representados pelas tags <code>&lt;article class="produto"&gt;</code>)[cite: 2, 12]. O componente equivalente em React construído para otimizar essa estrutura seria o componente <code>Produto</code>, e as suas propriedades (props) incluiriam o nome do item, a descrição detalhada e o preço correspondente de cada mercadoria ofertada pelos produtores locais de Paragominas[cite: 2, 12, 23].</p>
 
         <h3>3. Props e estado</h3>
-        <p>No componente <code>Produto</code> desenvolvido na Parte C, o dado que chega de fora por meio de propriedades (props) é o <code>nome</code> do item (como "Açaí" ou "Farinha d'água"), enquanto o dado mantido dinamicamente no estado interno é o <code>rotulo</code> do botão ("Adicionar" ou "No carrinho"). Quando o utilizador clica em dois produtos específicos, os demais cartões continuam totalmente inalterados porque cada instância individual do componente <code>Produto</code> possui a sua própria memória de estado isolada.</p>
+        <p>No componente <code>Produto</code> desenvolvido na Parte C, o dado que chega de fora por meio de propriedades (props) é o <code>nome</code> do item (como "Açaí" ou "Farinha d'água"), enquanto o dado mantido dinamicamente no estado interno é o <code>rotulo</code> do botão ("Adicionar" ou "No carrinho")[cite: 9, 12, 23]. Quando o utilizador clica em dois produtos específicos, os demais cartões continuam totalmente inalterados porque cada instância individual do componente <code>Produto</code> possui a sua própria memória de estado isolada[cite: 12, 20, 23].</p>
 
         <h3>4. A decisão de estilo</h3>
-        <p>Minha decisão de estilo inicial na Atividade 6 baseou-se em manter uma estrutura autoral limpa utilizando folhas customizadas com tokens de cores corporativos. Depois de realizar os Passos 8 a 18 no CodeSandbox e estilizar os cartões da AgroFeira com seletores e regras CSS manuais, minha decisão permanece a mesma. O uso de uma folha de estilo escrita à mão mostrou-se extremamente transparente e eficiente para compreender como o ecossistema do React interage diretamente com as classes e propriedades visuais sem dependências de frameworks externos complexos.</p>
+        <p>Minha decisão de estilo inicial na Atividade 6 baseou-se em manter uma estrutura autoral limpa utilizando folhas customizadas com tokens de cores corporativos. Depois de realizar os Passos 8 a 18 no CodeSandbox e estilizar os cartões da AgroFeira com seletores e regras CSS manuais, minha decisão permanece a mesma[cite: 12]. O uso de uma folha de estilo escrita à mão mostrou-se extremamente transparente e eficiente para compreender como o ecossistema do React interage diretamente comas classes e propriedades visuais sem dependências de frameworks externos complexos[cite: 12].</p>
     </main>
 </body>
 </html>
