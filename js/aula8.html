@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript na AgroFeira Alex da Silva Oliveira</title>
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="componentes.css">
+</head>
+<body>
+    <header>
+        <h1>AgroFeira Paragominas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="safra.html">Safra</a></li>
+                <li><a href="cadastro-produtor.html">Cadastro de Produtor</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>JavaScript na AgroFeira</h2>
+        
+        <p><strong>Nome completo:</strong> Alex da Silva Oliveira</p>
+        <p><strong>Matrícula:</strong> 2023000000 <span style="font-size: 0.9em; color: #666;">(substitua pelo seu número de matrícula real da UFRA)</span></p>
+        <p><strong>Repositório:</strong> <a href="https://github.com/derykalex/agrofeira-derykalex">https://github.com/derykalex/agrofeira-derykalex</a></p>
+        <p><strong>Endereço do site:</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/aula8.html">https://derykalex.github.io/agrofeira-derykalex/aula8.html</a></p>
+
+        <section>
+            <h3>Experimentos das três formas de JavaScript</h3>
+            <p>O JavaScript pode ser aplicado de três formas distintas: a Forma 1 utilizando um ficheiro externo (<code>js/aula8.js</code>), a Forma 2 inserida de forma interna entre as tags <code>&lt;script&gt;</code> na própria página, e a Forma 3 aplicada diretamente em linha (inline) por meio de atributos em elementos HTML como botões[cite: 3, 4].</p>
+            
+            <!-- Botão da Forma 3 em linha -->
+            <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')">Forma 3</button>
+        </section>
+
+        <!-- Scripts correspondentes às Formas 1 e 2 -->
+        <script src="js/aula8.js"></script>
+        <script>console.log('Forma 2: interna, entre as tags script');</script>
+
+        <h2>Meus projetos</h2>
+        <ul>
+            <li>Tabuleiro (Parte B): <a href="https://codesandbox.io/p/devbox/..." target="_blank">https://codesandbox.io/p/devbox/...</a> (Substitua pelo link Unlisted do seu CodeSandbox do Tabuleiro)</li>
+            <li>AgroFeira em componentes (Parte C): <a href="https://codesandbox.io/p/devbox/..." target="_blank">https://codesandbox.io/p/devbox/...</a> (Substitua pelo link Unlisted deste CodeSandbox da AgroFeira)</li>
+        </ul>
+
+        <h2>Mensagens que encontrei</h2>
+        <ul>
+            <li><strong>Passo 6 (naoExiste):</strong> Uncaught ReferenceError: naoExiste is not defined at aula8.js:2[cite: 4, 12]</li>
+            <li><strong>Passo 10 (Elementos vizinhos):</strong> Adjacent JSX elements must be wrapped in an enclosing tag[cite: 6, 12]</li>
+            <li><strong>Passo 14 (Value declarado duas vezes):</strong> TypeError: Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.js: Identifier 'value' has already been declared. (3:18)'[cite: 7, 12, 18]</li>
+        </ul>
+
+        <h2>O que eu aprendi</h2>
+
+        <h3>1. As três formas</h3>
+        <p>Para um programa de 200 linhas reutilizado em várias páginas, a escolha ideal seria a Forma 1 (externa, utilizando um ficheiro separado como <code>js/aula8.js</code>). Essa abordagem mantém a organização limpa do código e separa perfeitamente a estrutura HTML da lógica de programação. No desenvolvimento web moderno, assim como fazemos com as folhas de estilo CSS em ficheiros dedicados, o código JavaScript externo facilita a manutenção contínua e evita a poluição do código-fonte das páginas HTML.</p>
+
+        <h3>2. Repetição</h3>
+        <p>No <code>catalogo.html</code> da AgroFeira, os elementos que se repetem diversas vezes são os cartões visuais de produtos (representados pelas tags <code>&lt;article class="produto"&gt;</code>)[cite: 2, 12]. O componente equivalente em React construído para otimizar essa estrutura seria o componente <code>Produto</code>, e as suas propriedades (props) incluiriam o nome do item, a descrição detalhada e o preço correspondente de cada mercadoria ofertada pelos produtores locais de Paragominas[cite: 2, 12, 23].</p>
+
+        <h3>3. Props e estado</h3>
+        <p>No componente <code>Produto</code> desenvolvido na Parte C, o dado que chega de fora por meio de propriedades (props) é o <code>nome</code> do item (como "Açaí" ou "Farinha d'água"), enquanto o dado mantido dinamicamente no estado interno é o <code>rotulo</code> do botão ("Adicionar" ou "No carrinho")[cite: 9, 12, 23]. Quando o utilizador clica em dois produtos específicos, os demais cartões continuam totalmente inalterados porque cada instância individual do componente <code>Produto</code> possui a sua própria memória de estado isolada[cite: 12, 20, 23].</p>
+
+        <h3>4. A decisão de estilo</h3>
+        <p>Minha decisão de estilo inicial na Atividade 6 baseou-se em manter uma estrutura autoral limpa utilizando folhas customizadas com tokens de cores corporativos. Depois de realizar os Passos 8 a 18 no CodeSandbox e estilizar os cartões da AgroFeira com seletores e regras CSS manuais, minha decisão permanece a mesma[cite: 12]. O uso de uma folha de estilo escrita à mão mostrou-se extremamente transparente e eficiente para compreender como o ecossistema do React interage diretamente com as classes e propriedades visuais sem dependências de frameworks externos complexos[cite: 12].</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AgroFeira Paragominas - UFRA Campus Paragominas</p>
+    </footer>
+</body>
+</html>
