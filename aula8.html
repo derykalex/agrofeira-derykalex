@@ -3,9 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript na AgroFeira Alex da Silva Oliveira</title>
-    <link rel="stylesheet" href="tokens.css">
-    <link rel="stylesheet" href="componentes.css">
+    <title>Relatório - Atividade 8: JavaScript e React na AgroFeira | Alex da Silva Oliveira</title>
+    <style>
+        /* Estilo Relatório Acadêmico / Folha A4 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        header {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            background: #ffffff;
+            padding: 20px 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        header h1 {
+            font-size: 20px;
+            color: #111827;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #2563eb;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            display: none;
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px 60px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+        }
+        h2 {
+            font-size: 24px;
+            color: #111827;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        h3 {
+            font-size: 18px;
+            color: #1f2937;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-left: 4px solid #3b82f6;
+            padding-left: 10px;
+        }
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul.lista-conteudo {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        ul.lista-conteudo li {
+            margin-bottom: 8px;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .dados-aluno {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        .dados-aluno p {
+            margin-bottom: 6px;
+        }
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        button:hover {
+            background-color: #1d4ed8;
+        }
+        
+        /* Ajustes específicos para impressão / PDF */
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+            header {
+                box-shadow: none;
+                padding: 0 0 15px 0;
+                margin-bottom: 15px;
+                border-bottom: 1px solid #ccc;
+            }
+            nav {
+                display: none; /* Oculta o menu de navegação na impressão do PDF para manter o relatório limpo */
+            }
+            main {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            button {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,56 +160,54 @@
     </header>
 
     <main>
-        <h2>JavaScript na AgroFeira</h2>
+        <h2>Relatório da Atividade 8: JavaScript e React</h2>
         
-        <p><strong>Nome completo:</strong> Alex da Silva Oliveira</p>
-        <p><strong>Matrícula:</strong> 2024008859</p>
-        <p><strong>Curso:</strong> Sistemas de Informação - UFRA Campus Paragominas</p>
-        <p><strong>Repositório:</strong> <a href="https://github.com/derykalex/agrofeira--derykalex-">https://github.com/derykalex/agrofeira--derykalex-</a></p>
-        <p><strong>Endereço do site:</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/aula8.html">https://derykalex.github.io/agrofeira-derykalex/aula8.html</a></p>
+        <div class="dados-aluno">
+            <p><strong>Nome completo:</strong> Alex da Silva Oliveira</p>
+            <p><strong>Matrícula:</strong> 2024008859</p>
+            <p><strong>Curso:</strong> Sistemas de Informação (Bacharelado) — UFRA Campus Paragominas</p>
+            <p><strong>Repositório:</strong> <a href="https://github.com/derykalex/agrofeira--derykalex-" target="_blank">https://github.com/derykalex/agrofeira--derykalex-</a></p>
+            <p><strong>Endereço do site:</strong> <a href="https://derykalex.github.io/agrofeira-derykalex/aula8.html" target="_blank">https://derykalex.github.io/agrofeira-derykalex/aula8.html</a></p>
+        </div>
 
         <section>
             <h3>Experimentos das três formas de JavaScript</h3>
-            <p>O JavaScript pode ser aplicado de três formas distintas: a Forma 1 utilizando um ficheiro externo (<code>js/aula8.js</code>), a Forma 2 inserida de forma interna entre as tags <code>&lt;script&gt;</code> na própria página, e a Forma 3 aplicada diretamente em linha (inline) por meio de atributos em elementos HTML como botões[cite: 3, 4].</p>
+            <p>O JavaScript pode ser aplicado de três formas distintas: a Forma 1 utilizando um ficheiro externo (<code>js/aula8.js</code>), a Forma 2 inserida de forma interna entre as tags <code>&lt;script&gt;</code> na própria página, e a Forma 3 aplicada diretamente em linha (inline) por meio de atributos em elementos HTML como botões.</p>
             
             <!-- Botão da Forma 3 em linha -->
-            <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')">Forma 3</button>
+            <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')">Testar Botão (Forma 3)</button>
         </section>
 
         <!-- Scripts correspondentes às Formas 1 e 2 -->
         <script src="js/aula8.js"></script>
         <script>console.log('Forma 2: interna, entre as tags script');</script>
 
-        <h2>Meus projetos</h2>
-        <ul>
-            <li>Tabuleiro (Parte B): <a href="https://codesandbox.io/p/sandbox/react-dev-forked-2qlpry" target="_blank">https://codesandbox.io/p/sandbox/react-dev-forked-2qlpry</a>[cite: 12]</li>
-            <li>AgroFeira em componentes (Parte C): <a href="https://codesandbox.io/p/devbox/react-dev-forked-k9c6ys?workspaceId=ws_R6nWep5r32q31ZufbM26qu" target="_blank">https://codesandbox.io/p/devbox/react-dev-forked-k9c6ys?workspaceId=ws_R6nWep5r32q31ZufbM26qu</a>[cite: 12]</li>
+        <h3>Meus projetos</h3>
+        <ul class="lista-conteudo">
+            <li><strong>Tabuleiro (Parte B):</strong> <a href="https://codesandbox.io/p/sandbox/react-dev-forked-2qlpry" target="_blank">https://codesandbox.io/p/sandbox/react-dev-forked-2qlpry</a></li>
+            <li><strong>AgroFeira em componentes (Parte C):</strong> <a href="https://codesandbox.io/p/devbox/react-dev-forked-k9c6ys?workspaceId=ws_R6nWep5r32q31ZufbM26qu" target="_blank">https://codesandbox.io/p/devbox/react-dev-forked-k9c6ys?workspaceId=ws_R6nWep5r32q31ZufbM26qu</a></li>
         </ul>
 
-        <h2>Mensagens que encontrei</h2>
-        <ul>
-            <li><strong>Passo 6 (naoExiste):</strong> Uncaught ReferenceError: naoExiste is not defined at aula8.js:2[cite: 4, 12]</li>
-            <li><strong>Passo 10 (Elementos vizinhos):</strong> Adjacent JSX elements must be wrapped in an enclosing tag[cite: 6, 12]</li>
-            <li><strong>Passo 14 (Value declarado duas vezes):</strong> TypeError: Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.js: Identifier 'value' has already been declared. (3:18)'[cite: 7, 12, 18]</li>
+        <h3>Mensagens de erro encontradas</h3>
+        <ul class="lista-conteudo">
+            <li><strong>Passo 6 (naoExiste):</strong> <code>Uncaught ReferenceError: naoExiste is not defined at aula8.js:2</code></li>
+            <li><strong>Passo 10 (Elementos vizinhos):</strong> <code>Adjacent JSX elements must be wrapped in an enclosing tag</code></li>
+            <li><strong>Passo 14 (Value declarado duas vezes):</strong> <code>TypeError: Cannot assign to read only property 'message' of object 'SyntaxError: /src/App.js: Identifier 'value' has already been declared. (3:18)'</code></li>
         </ul>
 
         <h2>O que eu aprendi</h2>
 
-        <h3>1. As três formas</h3>
+        <h3>1. As três formas de inserção</h3>
         <p>Para um programa de 200 linhas reutilizado em várias páginas, a escolha ideal seria a Forma 1 (externa, utilizando um ficheiro separado como <code>js/aula8.js</code>). Essa abordagem mantém a organização limpa do código e separa perfeitamente a estrutura HTML da lógica de programação. No desenvolvimento web moderno, assim como fazemos com as folhas de estilo CSS em ficheiros dedicados, o código JavaScript externo facilita a manutenção contínua e evita a poluição do código-fonte das páginas HTML.</p>
 
-        <h3>2. Repetição</h3>
-        <p>No <code>catalogo.html</code> da AgroFeira, os elementos que se repetem diversas vezes são os cartões visuais de produtos (representados pelas tags <code>&lt;article class="produto"&gt;</code>)[cite: 2, 12]. O componente equivalente em React construído para otimizar essa estrutura seria o componente <code>Produto</code>, e as suas propriedades (props) incluiriam o nome do item, a descrição detalhada e o preço correspondente de cada mercadoria ofertada pelos produtores locais de Paragominas[cite: 2, 12, 23].</p>
+        <h3>2. Repetição de componentes</h3>
+        <p>No <code>catalogo.html</code> da AgroFeira, os elementos que se repetem diversas vezes são os cartões visuais de produtos (representados pelas tags <code>&lt;article class="produto"&gt;</code>). O componente equivalente em React construído para otimizar essa estrutura seria o componente <code>Produto</code>, e as suas propriedades (props) incluiriam o nome do item, a descrição detalhada e o preço correspondente de cada mercadoria ofertada pelos produtores locais de Paragominas.</p>
 
         <h3>3. Props e estado</h3>
-        <p>No componente <code>Produto</code> desenvolvido na Parte C, o dado que chega de fora por meio de propriedades (props) é o <code>nome</code> do item (como "Açaí" ou "Farinha d'água"), enquanto o dado mantido dinamicamente no estado interno é o <code>rotulo</code> do botão ("Adicionar" ou "No carrinho")[cite: 9, 12, 23]. Quando o utilizador clica em dois produtos específicos, os demais cartões continuam totalmente inalterados porque cada instância individual do componente <code>Produto</code> possui a sua própria memória de estado isolada[cite: 12, 20, 23].</p>
+        <p>No componente <code>Produto</code> desenvolvido na Parte C, o dado que chega de fora por meio de propriedades (props) é o <code>nome</code> do item (como "Açaí" ou "Farinha d'água"), enquanto o dado mantido dinamicamente no estado interno é o <code>rotulo</code> do botão ("Adicionar" ou "No carrinho"). Quando o utilizador clica em dois produtos específicos, os demais cartões continuam totalmente inalterados porque cada instância individual do componente <code>Produto</code> possui a sua própria memória de estado isolada.</p>
 
         <h3>4. A decisão de estilo</h3>
-        <p>Minha decisão de estilo inicial na Atividade 6 baseou-se em manter uma estrutura autoral limpa utilizando folhas customizadas com tokens de cores corporativos. Depois de realizar os Passos 8 a 18 no CodeSandbox e estilizar os cartões da AgroFeira com seletores e regras CSS manuais, minha decisão permanece a mesma[cite: 12]. O uso de uma folha de estilo escrita à mão mostrou-se extremamente transparente e eficiente para compreender como o ecossistema do React interage diretamente com as classes e propriedades visuais sem dependências de frameworks externos complexos[cite: 12].</p>
+        <p>Minha decisão de estilo inicial na Atividade 6 baseou-se em manter uma estrutura autoral limpa utilizando folhas customizadas com tokens de cores corporativos. Depois de realizar os Passos 8 a 18 no CodeSandbox e estilizar os cartões da AgroFeira com seletores e regras CSS manuais, minha decisão permanece a mesma. O uso de uma folha de estilo escrita à mão mostrou-se extremamente transparente e eficiente para compreender como o ecossistema do React interage diretamente com as classes e propriedades visuais sem dependências de frameworks externos complexos.</p>
     </main>
-
-    <footer>
-        <p>&copy; 2026 AgroFeira Paragominas - UFRA Campus Paragominas</p>
-    </footer>
 </body>
 </html>
